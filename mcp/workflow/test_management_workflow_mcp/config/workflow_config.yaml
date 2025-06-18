@@ -1,0 +1,239 @@
+# 工作流配置文件
+# PowerAutomation 测试管理工作流配置
+
+workflow:
+  name: "test_management_workflow_mcp"
+  version: "2.0.0"
+  type: "workflow"
+  description: "PowerAutomation测试管理工作流，专注于智能测试编排和策略管理"
+
+# 编排配置
+orchestration:
+  max_parallel_flows: 5
+  timeout: 3600
+  retry_policy: "exponential_backoff"
+  
+  # 工作流控制
+  control:
+    enable_conditional_execution: true
+    enable_loop_execution: true
+    enable_parallel_execution: true
+    max_retry_attempts: 3
+    
+  # 资源管理
+  resources:
+    max_memory_per_flow: "1GB"
+    max_cpu_percent: 70
+    max_concurrent_adapters: 10
+
+# AI策略配置
+ai_strategy:
+  model: "gpt-4"
+  temperature: 0.3
+  max_tokens: 2048
+  
+  # 策略生成配置
+  generation:
+    enable_context_learning: true
+    enable_adaptive_optimization: true
+    strategy_cache_ttl: 3600  # 1小时
+    
+  # 优化配置
+  optimization:
+    enable_performance_tuning: true
+    enable_resource_optimization: true
+    enable_cost_optimization: false
+
+# 测试生成配置
+test_generation:
+  coverage_target: 90
+  
+  # 优先级权重
+  priority_weights:
+    critical: 0.5
+    high: 0.3
+    medium: 0.2
+    low: 0.1
+    
+  # 测试类型配置
+  test_types:
+    unit:
+      enabled: true
+      coverage_target: 95
+      parallel_execution: true
+      
+    integration:
+      enabled: true
+      coverage_target: 85
+      parallel_execution: true
+      
+    functional:
+      enabled: true
+      coverage_target: 80
+      parallel_execution: false
+      
+    performance:
+      enabled: false
+      coverage_target: 70
+      parallel_execution: false
+      
+    ui:
+      enabled: false
+      coverage_target: 60
+      parallel_execution: false
+
+# 执行优化配置
+optimization:
+  parallel_execution: true
+  resource_balancing: true
+  smart_scheduling: true
+  
+  # 性能优化
+  performance:
+    enable_caching: true
+    enable_lazy_loading: true
+    enable_batch_processing: true
+    
+  # 调度优化
+  scheduling:
+    algorithm: "priority_based"  # priority_based, round_robin, load_balanced
+    consider_dependencies: true
+    consider_resource_usage: true
+
+# 集成配置
+integration:
+  # 适配器集成
+  adapters:
+    - name: "test_management_mcp"
+      endpoint: "http://localhost:8001"
+      timeout: 30
+      retry_count: 3
+      
+    - name: "smartui_mcp"
+      endpoint: "http://localhost:8002"
+      timeout: 60
+      retry_count: 2
+      
+  # 外部服务集成
+  external_services:
+    ci_cd:
+      enabled: false
+      type: "jenkins"  # jenkins, gitlab_ci, github_actions
+      endpoint: ""
+      
+    notification:
+      enabled: false
+      type: "slack"  # slack, teams, email
+      webhook_url: ""
+      
+    monitoring:
+      enabled: true
+      type: "prometheus"
+      endpoint: "http://localhost:9090"
+
+# 监控配置
+monitoring:
+  metrics_enabled: true
+  alerts_enabled: true
+  dashboard_port: 8080
+  
+  # 指标收集
+  metrics:
+    collection_interval: 30  # 秒
+    retention_period: 7  # 天
+    
+    # 收集的指标
+    collected_metrics:
+      - "workflow_execution_time"
+      - "step_success_rate"
+      - "resource_utilization"
+      - "adapter_response_time"
+      - "error_rate"
+      
+  # 告警配置
+  alerts:
+    workflow_timeout_threshold: 3600  # 秒
+    error_rate_threshold: 0.1  # 10%
+    resource_usage_threshold: 0.8  # 80%
+    
+  # 仪表板配置
+  dashboard:
+    refresh_interval: 5  # 秒
+    show_real_time_metrics: true
+    show_historical_trends: true
+
+# 分析配置
+analytics:
+  data_retention: 90  # 天
+  aggregation_interval: 3600  # 秒
+  
+  # 分析模块
+  modules:
+    performance_analysis:
+      enabled: true
+      analysis_interval: 3600  # 秒
+      
+    trend_analysis:
+      enabled: true
+      lookback_period: 30  # 天
+      
+    predictive_analysis:
+      enabled: true
+      prediction_horizon: 7  # 天
+      
+    cost_analysis:
+      enabled: false
+      cost_model: "resource_based"
+
+# 报告配置
+reporting:
+  formats: ["json", "html", "pdf"]
+  schedule: "daily"
+  
+  # 报告内容
+  content:
+    include_workflow_summary: true
+    include_step_details: true
+    include_performance_metrics: true
+    include_error_analysis: true
+    include_recommendations: true
+    
+  # 分发配置
+  distribution:
+    email_recipients: []
+    webhook_urls: []
+    file_storage_path: "./reports"
+
+# 安全配置
+security:
+  enable_authentication: false
+  enable_authorization: false
+  api_key: ""
+  
+  # 访问控制
+  access_control:
+    allowed_hosts: ["localhost", "127.0.0.1"]
+    rate_limiting:
+      enabled: false
+      requests_per_minute: 100
+      
+  # 数据保护
+  data_protection:
+    encrypt_sensitive_data: false
+    mask_credentials: true
+    audit_logging: true
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "workflow.log"
+  max_size: "50MB"
+  backup_count: 10
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # 结构化日志
+  structured_logging:
+    enabled: true
+    format: "json"
+    include_context: true
+
