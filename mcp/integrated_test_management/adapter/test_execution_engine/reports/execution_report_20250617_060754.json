@@ -1,0 +1,1168 @@
+{
+  "test_execution_id": "MCP_TestExecution_20250617_060754",
+  "execution_summary": {
+    "start_time": "2025-06-17T06:07:48.536667",
+    "end_time": "2025-06-17T06:07:54.489470",
+    "total_duration": 5.952803,
+    "total_tests": 51,
+    "passed_tests": 0,
+    "failed_tests": 51,
+    "timeout_tests": 0,
+    "error_tests": 0,
+    "success_rate": 0.0
+  },
+  "module_statistics": {
+    "cloud_search_mcp": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "timeout": 0,
+      "error": 0
+    },
+    "development_intervention_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "directory_structure_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "enterprise_smartui_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "github_mcp": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "timeout": 0,
+      "error": 0
+    },
+    "interaction_log_manager": {
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "timeout": 0,
+      "error": 0
+    },
+    "test_manage_mcp": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "timeout": 0,
+      "error": 0
+    },
+    "kilocode_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "local_model_mcp": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "timeout": 0,
+      "error": 0
+    },
+    "enhanced_workflow_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "architecture_design_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "coding_workflow_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "developer_flow_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "operations_workflow_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "release_manager_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    },
+    "requirements_analysis_mcp": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "timeout": 0,
+      "error": 0
+    }
+  },
+  "type_statistics": {
+    "unit": {
+      "total": 35,
+      "passed": 0,
+      "failed": 35,
+      "timeout": 0,
+      "error": 0
+    },
+    "integration": {
+      "total": 16,
+      "passed": 0,
+      "failed": 16,
+      "timeout": 0,
+      "error": 0
+    }
+  },
+  "detailed_results": [
+    {
+      "module_name": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp.py",
+      "test_path": "mcp/adapter/cloud_search_mcp/unit_tests/test_cloud_search_mcp.py",
+      "status": "FAIL",
+      "duration": 0.048025,
+      "start_time": "2025-06-17T06:07:48.539371",
+      "end_time": "2025-06-17T06:07:48.587396",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/cloud_search_mcp/__init__.py\", line 5\n    ├── cloud_search_mcp.py          # 核心MCP实现\n    ^\nSyntaxError: invalid character '├' (U+251C)\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp_simple.py",
+      "test_path": "mcp/adapter/cloud_search_mcp/unit_tests/test_cloud_search_mcp_simple.py",
+      "status": "FAIL",
+      "duration": 0.048038,
+      "start_time": "2025-06-17T06:07:48.539546",
+      "end_time": "2025-06-17T06:07:48.587584",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/cloud_search_mcp/__init__.py\", line 5\n    ├── cloud_search_mcp.py          # 核心MCP实现\n    ^\nSyntaxError: invalid character '├' (U+251C)\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "cloud_search_mcp",
+      "test_type": "integration",
+      "test_file": "test_cloud_search_mcp_integration.py",
+      "test_path": "mcp/adapter/cloud_search_mcp/integration_tests/test_cloud_search_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.047094,
+      "start_time": "2025-06-17T06:07:48.587649",
+      "end_time": "2025-06-17T06:07:48.634743",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/cloud_search_mcp/__init__.py\", line 5\n    ├── cloud_search_mcp.py          # 核心MCP实现\n    ^\nSyntaxError: invalid character '├' (U+251C)\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/cloud_search_mcp/unit_tests/test_cloud_search_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.047405,
+      "start_time": "2025-06-17T06:07:48.587505",
+      "end_time": "2025-06-17T06:07:48.634910",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/cloud_search_mcp/__init__.py\", line 5\n    ├── cloud_search_mcp.py          # 核心MCP实现\n    ^\nSyntaxError: invalid character '├' (U+251C)\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "development_intervention_mcp",
+      "test_type": "unit",
+      "test_file": "test_development_intervention_mcp.py",
+      "test_path": "mcp/adapter/development_intervention_mcp/unit_tests/test_development_intervention_mcp.py",
+      "status": "FAIL",
+      "duration": 0.04639,
+      "start_time": "2025-06-17T06:07:48.634845",
+      "end_time": "2025-06-17T06:07:48.681235",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/development_intervention_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "development_intervention_mcp",
+      "test_type": "unit",
+      "test_file": "test_development_intervention_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/development_intervention_mcp/unit_tests/test_development_intervention_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.046563,
+      "start_time": "2025-06-17T06:07:48.634969",
+      "end_time": "2025-06-17T06:07:48.681532",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/development_intervention_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "development_intervention_mcp",
+      "test_type": "integration",
+      "test_file": "test_development_intervention_mcp_integration.py",
+      "test_path": "mcp/adapter/development_intervention_mcp/integration_tests/test_development_intervention_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.045955,
+      "start_time": "2025-06-17T06:07:48.681339",
+      "end_time": "2025-06-17T06:07:48.727294",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/development_intervention_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "directory_structure_mcp",
+      "test_type": "unit",
+      "test_file": "test_directory_structure_mcp.py",
+      "test_path": "mcp/adapter/directory_structure_mcp/unit_tests/test_directory_structure_mcp.py",
+      "status": "FAIL",
+      "duration": 0.046318,
+      "start_time": "2025-06-17T06:07:48.681597",
+      "end_time": "2025-06-17T06:07:48.727915",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/directory_structure_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "directory_structure_mcp",
+      "test_type": "integration",
+      "test_file": "test_directory_structure_mcp_integration.py",
+      "test_path": "mcp/adapter/directory_structure_mcp/integration_tests/test_directory_structure_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.045524,
+      "start_time": "2025-06-17T06:07:48.727976",
+      "end_time": "2025-06-17T06:07:48.773500",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/directory_structure_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "directory_structure_mcp",
+      "test_type": "unit",
+      "test_file": "test_directory_structure_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/directory_structure_mcp/unit_tests/test_directory_structure_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.046374,
+      "start_time": "2025-06-17T06:07:48.727392",
+      "end_time": "2025-06-17T06:07:48.773766",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/directory_structure_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enterprise_smartui_mcp",
+      "test_type": "unit",
+      "test_file": "test_enterprise_smartui_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/enterprise_smartui_mcp/unit_tests/test_enterprise_smartui_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.083023,
+      "start_time": "2025-06-17T06:07:48.773821",
+      "end_time": "2025-06-17T06:07:48.856844",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enterprise_smartui_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enterprise_smartui_mcp",
+      "test_type": "unit",
+      "test_file": "test_enterprise_smartui_mcp.py",
+      "test_path": "mcp/adapter/enterprise_smartui_mcp/unit_tests/test_enterprise_smartui_mcp.py",
+      "status": "FAIL",
+      "duration": 0.084905,
+      "start_time": "2025-06-17T06:07:48.773592",
+      "end_time": "2025-06-17T06:07:48.858497",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enterprise_smartui_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp.py",
+      "test_path": "mcp/adapter/github_mcp/unit_tests/test_github_mcp.py",
+      "status": "FAIL",
+      "duration": 0.045681,
+      "start_time": "2025-06-17T06:07:48.858563",
+      "end_time": "2025-06-17T06:07:48.904244",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/github_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enterprise_smartui_mcp",
+      "test_type": "integration",
+      "test_file": "test_enterprise_smartui_mcp_integration.py",
+      "test_path": "mcp/adapter/enterprise_smartui_mcp/integration_tests/test_enterprise_smartui_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.081107,
+      "start_time": "2025-06-17T06:07:48.856955",
+      "end_time": "2025-06-17T06:07:48.938062",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enterprise_smartui_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp_simple.py",
+      "test_path": "mcp/adapter/github_mcp/unit_tests/test_github_mcp_simple.py",
+      "status": "FAIL",
+      "duration": 0.045753,
+      "start_time": "2025-06-17T06:07:48.904334",
+      "end_time": "2025-06-17T06:07:48.950087",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/github_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/github_mcp/unit_tests/test_github_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.045263,
+      "start_time": "2025-06-17T06:07:48.938150",
+      "end_time": "2025-06-17T06:07:48.983413",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/github_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "github_mcp",
+      "test_type": "integration",
+      "test_file": "test_github_mcp_integration.py",
+      "test_path": "mcp/adapter/github_mcp/integration_tests/test_github_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.045523,
+      "start_time": "2025-06-17T06:07:48.950172",
+      "end_time": "2025-06-17T06:07:48.995695",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/github_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "interaction_log_manager",
+      "test_type": "unit",
+      "test_file": "test_interaction_log_manager.py",
+      "test_path": "mcp/adapter/interaction_log_manager/unit_tests/test_interaction_log_manager.py",
+      "status": "FAIL",
+      "duration": 0.04706,
+      "start_time": "2025-06-17T06:07:48.983507",
+      "end_time": "2025-06-17T06:07:49.030567",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/interaction_log_manager/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "interaction_log_manager",
+      "test_type": "integration",
+      "test_file": "test_interaction_log_manager_integration.py",
+      "test_path": "mcp/adapter/interaction_log_manager/integration_tests/test_interaction_log_manager_integration.py",
+      "status": "FAIL",
+      "duration": 0.045387,
+      "start_time": "2025-06-17T06:07:48.995792",
+      "end_time": "2025-06-17T06:07:49.041179",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/interaction_log_manager/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp.py",
+      "test_path": "mcp/adapter/test_manage_mcp/unit_tests/test_test_manage_mcp.py",
+      "status": "FAIL",
+      "duration": 0.100157,
+      "start_time": "2025-06-17T06:07:49.030656",
+      "end_time": "2025-06-17T06:07:49.130813",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/test_manage_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp_simple.py",
+      "test_path": "mcp/adapter/test_manage_mcp/unit_tests/test_test_manage_mcp_simple.py",
+      "status": "FAIL",
+      "duration": 0.10063,
+      "start_time": "2025-06-17T06:07:49.041264",
+      "end_time": "2025-06-17T06:07:49.141894",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/test_manage_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/test_manage_mcp/unit_tests/test_test_manage_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.100439,
+      "start_time": "2025-06-17T06:07:49.130903",
+      "end_time": "2025-06-17T06:07:49.231342",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/test_manage_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "test_manage_mcp",
+      "test_type": "integration",
+      "test_file": "test_test_manage_mcp_integration.py",
+      "test_path": "mcp/adapter/test_manage_mcp/integration_tests/test_test_manage_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.099977,
+      "start_time": "2025-06-17T06:07:49.141980",
+      "end_time": "2025-06-17T06:07:49.241957",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/test_manage_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "kilocode_mcp",
+      "test_type": "unit",
+      "test_file": "test_kilocode_mcp.py",
+      "test_path": "mcp/adapter/kilocode_mcp/unit_tests/test_kilocode_mcp.py",
+      "status": "FAIL",
+      "duration": 0.047049,
+      "start_time": "2025-06-17T06:07:49.231431",
+      "end_time": "2025-06-17T06:07:49.278480",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/kilocode_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "kilocode_mcp",
+      "test_type": "unit",
+      "test_file": "test_kilocode_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/kilocode_mcp/unit_tests/test_kilocode_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.046849,
+      "start_time": "2025-06-17T06:07:49.242048",
+      "end_time": "2025-06-17T06:07:49.288897",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/kilocode_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "kilocode_mcp",
+      "test_type": "integration",
+      "test_file": "test_kilocode_mcp_integration.py",
+      "test_path": "mcp/adapter/kilocode_mcp/integration_tests/test_kilocode_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.046445,
+      "start_time": "2025-06-17T06:07:49.278572",
+      "end_time": "2025-06-17T06:07:49.325017",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/kilocode_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp.py",
+      "test_path": "mcp/adapter/local_model_mcp/unit_tests/test_local_model_mcp.py",
+      "status": "FAIL",
+      "duration": 2.075913,
+      "start_time": "2025-06-17T06:07:49.288986",
+      "end_time": "2025-06-17T06:07:51.364899",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/local_model_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp_simple.py",
+      "test_path": "mcp/adapter/local_model_mcp/unit_tests/test_local_model_mcp_simple.py",
+      "status": "FAIL",
+      "duration": 2.118792,
+      "start_time": "2025-06-17T06:07:49.325109",
+      "end_time": "2025-06-17T06:07:51.443901",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/local_model_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/local_model_mcp/unit_tests/test_local_model_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 2.138178,
+      "start_time": "2025-06-17T06:07:51.365021",
+      "end_time": "2025-06-17T06:07:53.503199",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/local_model_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "local_model_mcp",
+      "test_type": "integration",
+      "test_file": "test_local_model_mcp_integration.py",
+      "test_path": "mcp/adapter/local_model_mcp/integration_tests/test_local_model_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 2.084921,
+      "start_time": "2025-06-17T06:07:51.443997",
+      "end_time": "2025-06-17T06:07:53.528918",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/local_model_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enhanced_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_enhanced_workflow_mcp.py",
+      "test_path": "mcp/adapter/enhanced_workflow_mcp/unit_tests/test_enhanced_workflow_mcp.py",
+      "status": "FAIL",
+      "duration": 0.233683,
+      "start_time": "2025-06-17T06:07:53.503323",
+      "end_time": "2025-06-17T06:07:53.737006",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enhanced_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enhanced_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_enhanced_workflow_mcp_comprehensive.py",
+      "test_path": "mcp/adapter/enhanced_workflow_mcp/unit_tests/test_enhanced_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.231223,
+      "start_time": "2025-06-17T06:07:53.529019",
+      "end_time": "2025-06-17T06:07:53.760242",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enhanced_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "architecture_design_mcp",
+      "test_type": "unit",
+      "test_file": "test_architecture_design_mcp.py",
+      "test_path": "mcp/workflow/architecture_design_mcp/unit_tests/test_architecture_design_mcp.py",
+      "status": "FAIL",
+      "duration": 0.085312,
+      "start_time": "2025-06-17T06:07:53.760428",
+      "end_time": "2025-06-17T06:07:53.845740",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/architecture_design_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "architecture_design_mcp",
+      "test_type": "unit",
+      "test_file": "test_architecture_design_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/architecture_design_mcp/unit_tests/test_architecture_design_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.083126,
+      "start_time": "2025-06-17T06:07:53.845848",
+      "end_time": "2025-06-17T06:07:53.928974",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/architecture_design_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "enhanced_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_enhanced_workflow_mcp_integration.py",
+      "test_path": "mcp/adapter/enhanced_workflow_mcp/integration_tests/test_enhanced_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.239746,
+      "start_time": "2025-06-17T06:07:53.737100",
+      "end_time": "2025-06-17T06:07:53.976846",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/adapter/enhanced_workflow_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "architecture_design_mcp",
+      "test_type": "integration",
+      "test_file": "test_architecture_design_mcp_integration.py",
+      "test_path": "mcp/workflow/architecture_design_mcp/integration_tests/test_architecture_design_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.081132,
+      "start_time": "2025-06-17T06:07:53.929089",
+      "end_time": "2025-06-17T06:07:54.010221",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/architecture_design_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "coding_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_coding_workflow_mcp.py",
+      "test_path": "mcp/workflow/coding_workflow_mcp/unit_tests/test_coding_workflow_mcp.py",
+      "status": "FAIL",
+      "duration": 0.049241,
+      "start_time": "2025-06-17T06:07:53.976948",
+      "end_time": "2025-06-17T06:07:54.026189",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/coding_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "coding_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_coding_workflow_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/coding_workflow_mcp/unit_tests/test_coding_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.045466,
+      "start_time": "2025-06-17T06:07:54.010312",
+      "end_time": "2025-06-17T06:07:54.055778",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/coding_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "coding_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_coding_workflow_mcp_integration.py",
+      "test_path": "mcp/workflow/coding_workflow_mcp/integration_tests/test_coding_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.051127,
+      "start_time": "2025-06-17T06:07:54.026276",
+      "end_time": "2025-06-17T06:07:54.077403",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/coding_workflow_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "developer_flow_mcp",
+      "test_type": "unit",
+      "test_file": "test_developer_flow_mcp.py",
+      "test_path": "mcp/workflow/developer_flow_mcp/unit_tests/test_developer_flow_mcp.py",
+      "status": "FAIL",
+      "duration": 0.045478,
+      "start_time": "2025-06-17T06:07:54.055896",
+      "end_time": "2025-06-17T06:07:54.101374",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/developer_flow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "developer_flow_mcp",
+      "test_type": "unit",
+      "test_file": "test_developer_flow_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/developer_flow_mcp/unit_tests/test_developer_flow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.047436,
+      "start_time": "2025-06-17T06:07:54.077592",
+      "end_time": "2025-06-17T06:07:54.125028",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/developer_flow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "developer_flow_mcp",
+      "test_type": "integration",
+      "test_file": "test_developer_flow_mcp_integration.py",
+      "test_path": "mcp/workflow/developer_flow_mcp/integration_tests/test_developer_flow_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.047402,
+      "start_time": "2025-06-17T06:07:54.101486",
+      "end_time": "2025-06-17T06:07:54.148888",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/developer_flow_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "operations_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_operations_workflow_mcp.py",
+      "test_path": "mcp/workflow/operations_workflow_mcp/unit_tests/test_operations_workflow_mcp.py",
+      "status": "FAIL",
+      "duration": 0.085176,
+      "start_time": "2025-06-17T06:07:54.125126",
+      "end_time": "2025-06-17T06:07:54.210302",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/operations_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "operations_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_operations_workflow_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/operations_workflow_mcp/unit_tests/test_operations_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.08141,
+      "start_time": "2025-06-17T06:07:54.149039",
+      "end_time": "2025-06-17T06:07:54.230449",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/operations_workflow_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "release_manager_mcp",
+      "test_type": "unit",
+      "test_file": "test_release_manager_mcp.py",
+      "test_path": "mcp/workflow/release_manager_mcp/unit_tests/test_release_manager_mcp.py",
+      "status": "FAIL",
+      "duration": 0.045824,
+      "start_time": "2025-06-17T06:07:54.230568",
+      "end_time": "2025-06-17T06:07:54.276392",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/release_manager_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "operations_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_operations_workflow_mcp_integration.py",
+      "test_path": "mcp/workflow/operations_workflow_mcp/integration_tests/test_operations_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.083048,
+      "start_time": "2025-06-17T06:07:54.210398",
+      "end_time": "2025-06-17T06:07:54.293446",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/operations_workflow_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "release_manager_mcp",
+      "test_type": "unit",
+      "test_file": "test_release_manager_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/release_manager_mcp/unit_tests/test_release_manager_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.045962,
+      "start_time": "2025-06-17T06:07:54.276520",
+      "end_time": "2025-06-17T06:07:54.322482",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/release_manager_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "release_manager_mcp",
+      "test_type": "integration",
+      "test_file": "test_release_manager_mcp_integration.py",
+      "test_path": "mcp/workflow/release_manager_mcp/integration_tests/test_release_manager_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.049241,
+      "start_time": "2025-06-17T06:07:54.293539",
+      "end_time": "2025-06-17T06:07:54.342780",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/release_manager_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "requirements_analysis_mcp",
+      "test_type": "unit",
+      "test_file": "test_requirements_analysis_mcp.py",
+      "test_path": "mcp/workflow/requirements_analysis_mcp/unit_tests/test_requirements_analysis_mcp.py",
+      "status": "FAIL",
+      "duration": 0.081592,
+      "start_time": "2025-06-17T06:07:54.322577",
+      "end_time": "2025-06-17T06:07:54.404169",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/requirements_analysis_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "requirements_analysis_mcp",
+      "test_type": "unit",
+      "test_file": "test_requirements_analysis_mcp_comprehensive.py",
+      "test_path": "mcp/workflow/requirements_analysis_mcp/unit_tests/test_requirements_analysis_mcp_comprehensive.py",
+      "status": "FAIL",
+      "duration": 0.084316,
+      "start_time": "2025-06-17T06:07:54.342864",
+      "end_time": "2025-06-17T06:07:54.427180",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/requirements_analysis_mcp/unit_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    },
+    {
+      "module_name": "requirements_analysis_mcp",
+      "test_type": "integration",
+      "test_file": "test_requirements_analysis_mcp_integration.py",
+      "test_path": "mcp/workflow/requirements_analysis_mcp/integration_tests/test_requirements_analysis_mcp_integration.py",
+      "status": "FAIL",
+      "duration": 0.084475,
+      "start_time": "2025-06-17T06:07:54.404368",
+      "end_time": "2025-06-17T06:07:54.488843",
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    self.test = self.testLoader.loadTestsFromNames(self.testNames,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in loadTestsFromNames\n    suites = [self.loadTestsFromName(name, module) for name in names]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 220, in <listcomp>\n    suites = [self.loadTestsFromName(name, module) for name in names]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.11/unittest/loader.py\", line 154, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/powerautomation/mcp/workflow/requirements_analysis_mcp/integration_tests/__init__.py\", line 1\n    \"\"\"测试模块初始化文件\"\"\"\\n\n                                      ^\nSyntaxError: unexpected character after line continuation character\n",
+      "return_code": 1
+    }
+  ],
+  "failed_tests_summary": [
+    {
+      "module": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp_simple.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "cloud_search_mcp",
+      "test_type": "integration",
+      "test_file": "test_cloud_search_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "cloud_search_mcp",
+      "test_type": "unit",
+      "test_file": "test_cloud_search_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "development_intervention_mcp",
+      "test_type": "unit",
+      "test_file": "test_development_intervention_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "development_intervention_mcp",
+      "test_type": "unit",
+      "test_file": "test_development_intervention_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "development_intervention_mcp",
+      "test_type": "integration",
+      "test_file": "test_development_intervention_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "directory_structure_mcp",
+      "test_type": "unit",
+      "test_file": "test_directory_structure_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "directory_structure_mcp",
+      "test_type": "integration",
+      "test_file": "test_directory_structure_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "directory_structure_mcp",
+      "test_type": "unit",
+      "test_file": "test_directory_structure_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enterprise_smartui_mcp",
+      "test_type": "unit",
+      "test_file": "test_enterprise_smartui_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enterprise_smartui_mcp",
+      "test_type": "unit",
+      "test_file": "test_enterprise_smartui_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enterprise_smartui_mcp",
+      "test_type": "integration",
+      "test_file": "test_enterprise_smartui_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp_simple.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "github_mcp",
+      "test_type": "unit",
+      "test_file": "test_github_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "github_mcp",
+      "test_type": "integration",
+      "test_file": "test_github_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "interaction_log_manager",
+      "test_type": "unit",
+      "test_file": "test_interaction_log_manager.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "interaction_log_manager",
+      "test_type": "integration",
+      "test_file": "test_interaction_log_manager_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp_simple.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "test_manage_mcp",
+      "test_type": "unit",
+      "test_file": "test_test_manage_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "test_manage_mcp",
+      "test_type": "integration",
+      "test_file": "test_test_manage_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "kilocode_mcp",
+      "test_type": "unit",
+      "test_file": "test_kilocode_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "kilocode_mcp",
+      "test_type": "unit",
+      "test_file": "test_kilocode_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "kilocode_mcp",
+      "test_type": "integration",
+      "test_file": "test_kilocode_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp_simple.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "local_model_mcp",
+      "test_type": "unit",
+      "test_file": "test_local_model_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "local_model_mcp",
+      "test_type": "integration",
+      "test_file": "test_local_model_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enhanced_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_enhanced_workflow_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enhanced_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_enhanced_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "architecture_design_mcp",
+      "test_type": "unit",
+      "test_file": "test_architecture_design_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "architecture_design_mcp",
+      "test_type": "unit",
+      "test_file": "test_architecture_design_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "enhanced_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_enhanced_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "architecture_design_mcp",
+      "test_type": "integration",
+      "test_file": "test_architecture_design_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "coding_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_coding_workflow_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "coding_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_coding_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "coding_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_coding_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "developer_flow_mcp",
+      "test_type": "unit",
+      "test_file": "test_developer_flow_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "developer_flow_mcp",
+      "test_type": "unit",
+      "test_file": "test_developer_flow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "developer_flow_mcp",
+      "test_type": "integration",
+      "test_file": "test_developer_flow_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "operations_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_operations_workflow_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "operations_workflow_mcp",
+      "test_type": "unit",
+      "test_file": "test_operations_workflow_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "release_manager_mcp",
+      "test_type": "unit",
+      "test_file": "test_release_manager_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "operations_workflow_mcp",
+      "test_type": "integration",
+      "test_file": "test_operations_workflow_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "release_manager_mcp",
+      "test_type": "unit",
+      "test_file": "test_release_manager_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "release_manager_mcp",
+      "test_type": "integration",
+      "test_file": "test_release_manager_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "requirements_analysis_mcp",
+      "test_type": "unit",
+      "test_file": "test_requirements_analysis_mcp.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "requirements_analysis_mcp",
+      "test_type": "unit",
+      "test_file": "test_requirements_analysis_mcp_comprehensive.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    },
+    {
+      "module": "requirements_analysis_mcp",
+      "test_type": "integration",
+      "test_file": "test_requirements_analysis_mcp_integration.py",
+      "status": "FAIL",
+      "error": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/usr/lib/python3.11/unittest/__main__.py\", line 18, in <module>\n    main(module=None)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 101, in __init__\n    self.parseArgs(argv)\n  File \"/usr/lib/python3.11/unittest/main.py\", line 150, in parseArgs\n    self.createTests()\n  File \"/usr/lib/python3.11/unittest/main.py\", line 161, in createTests\n    sel"
+    }
+  ]
+}

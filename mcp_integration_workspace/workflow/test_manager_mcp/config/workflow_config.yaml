@@ -1,0 +1,107 @@
+# 工作流层配置文件
+# PowerAutomation 测试管理器MCP配置
+
+# 基本配置
+project:
+  name: "PowerAutomation Test Manager MCP"
+  version: "2.0.0"
+  description: "智能测试工作流管理器"
+
+# 工作流配置
+workflow:
+  # 默认策略模板
+  default_strategy: "comprehensive"
+  
+  # 执行配置
+  execution:
+    max_concurrent_workflows: 5
+    default_timeout: 3600
+    retry_count: 3
+    
+  # 策略模板配置
+  strategy_templates:
+    unit_testing:
+      max_workers: 4
+      timeout: 1800
+      execution_mode: "parallel"
+    
+    integration_testing:
+      max_workers: 2
+      timeout: 3600
+      execution_mode: "sequential"
+    
+    comprehensive:
+      max_workers: 6
+      timeout: 7200
+      execution_mode: "adaptive"
+    
+    performance:
+      max_workers: 1
+      timeout: 10800
+      execution_mode: "sequential"
+
+# AI优化配置
+ai_optimization:
+  enabled: true
+  
+  # 推荐引擎配置
+  recommendation_engine:
+    confidence_threshold: 0.7
+    max_recommendations: 10
+    
+  # 性能分析配置
+  performance_analysis:
+    history_window: 30  # 天
+    baseline_success_rate: 90.0
+    baseline_duration: 300  # 秒
+
+# 通信配置
+communication:
+  # 消息总线配置
+  message_bus:
+    max_message_size: 1048576  # 1MB
+    message_ttl: 3600  # 秒
+    
+  # 事件配置
+  events:
+    publish_all_events: true
+    event_history_size: 1000
+
+# 存储配置
+storage:
+  # 策略存储
+  strategies:
+    path: "./strategies"
+    backup_enabled: true
+    backup_interval: 86400  # 24小时
+    
+  # 工作流存储
+  workflows:
+    path: "./workflows"
+    retention_days: 30
+    
+  # 日志配置
+  logging:
+    level: "INFO"
+    file: "./logs/test_manager_mcp.log"
+    max_size: 10485760  # 10MB
+    backup_count: 5
+
+# 监控配置
+monitoring:
+  # 健康检查
+  health_check:
+    enabled: true
+    interval: 60  # 秒
+    
+  # 性能监控
+  performance:
+    enabled: true
+    metrics_interval: 30  # 秒
+    
+  # 告警配置
+  alerts:
+    enabled: true
+    failure_threshold: 3
+    notification_channels: ["log", "event"]
+

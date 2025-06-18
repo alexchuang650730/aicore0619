@@ -1,0 +1,181 @@
+# 适配器层配置文件
+# PowerAutomation 测试执行引擎配置
+
+# 基本配置
+project:
+  name: "PowerAutomation Test Execution Engine"
+  version: "2.0.0"
+  description: "高性能测试执行引擎"
+
+# 执行引擎配置
+execution_engine:
+  # 基本设置
+  project_root: "/opt/powerautomation"
+  max_concurrent_executions: 10
+  default_timeout: 300
+  
+  # 资源限制
+  resources:
+    max_memory_mb: 2048
+    max_cpu_cores: 4
+    temp_dir: "/tmp/powerautomation_tests"
+    
+  # 执行模式配置
+  execution_modes:
+    parallel:
+      default_workers: 4
+      max_workers: 8
+    sequential:
+      batch_size: 1
+    adaptive:
+      auto_scale: true
+      scale_factor: 1.5
+
+# 测试框架生成配置
+framework_generation:
+  # 支持的测试框架
+  supported_frameworks:
+    - "pytest"
+    - "unittest"
+    - "nose2"
+    
+  # 默认模板
+  default_templates:
+    unit: "pytest_unit_template"
+    integration: "pytest_integration_template"
+    e2e: "pytest_e2e_template"
+    
+  # 生成选项
+  generation_options:
+    include_fixtures: true
+    include_mocks: true
+    include_parametrize: true
+    code_coverage: true
+
+# 测试执行配置
+test_execution:
+  # 环境配置
+  environment:
+    python_path: "/usr/bin/python3"
+    virtual_env: null
+    
+  # 执行选项
+  options:
+    verbose: true
+    capture_output: true
+    stop_on_first_failure: false
+    
+  # 重试配置
+  retry:
+    enabled: true
+    max_attempts: 3
+    backoff_factor: 2.0
+    
+  # 超时配置
+  timeouts:
+    test_case: 60  # 秒
+    test_suite: 1800  # 秒
+    total_execution: 7200  # 秒
+
+# 问题修复配置
+issue_fixing:
+  # 自动修复选项
+  auto_fix:
+    enabled: true
+    backup_original: true
+    
+  # 支持的修复类型
+  fix_types:
+    - "syntax_errors"
+    - "import_errors"
+    - "indentation_errors"
+    - "missing_dependencies"
+    
+  # 修复策略
+  strategies:
+    conservative: true  # 保守修复策略
+    aggressive: false   # 激进修复策略
+
+# 报告生成配置
+report_generation:
+  # 报告格式
+  formats:
+    - "json"
+    - "html"
+    - "xml"
+    
+  # 报告内容
+  content:
+    include_logs: true
+    include_screenshots: false
+    include_coverage: true
+    include_performance: true
+    
+  # 存储配置
+  storage:
+    path: "./reports"
+    retention_days: 30
+    compress_old_reports: true
+
+# CLI工具配置
+cli:
+  # 命令配置
+  commands:
+    generate: true
+    execute: true
+    fix: true
+    report: true
+    status: true
+    
+  # 输出配置
+  output:
+    colored: true
+    progress_bar: true
+    verbose_errors: true
+
+# 通信配置
+communication:
+  # 适配器通信
+  adapter:
+    component_name: "test_execution_engine"
+    heartbeat_interval: 30  # 秒
+    
+  # 事件发布
+  events:
+    publish_progress: true
+    progress_interval: 10  # 秒
+
+# 监控配置
+monitoring:
+  # 性能监控
+  performance:
+    enabled: true
+    collect_metrics: true
+    metrics_file: "./metrics/execution_metrics.json"
+    
+  # 资源监控
+  resources:
+    monitor_memory: true
+    monitor_cpu: true
+    alert_threshold: 90  # 百分比
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "./logs/test_execution_engine.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+  
+# 安全配置
+security:
+  # 执行安全
+  execution_security:
+    sandbox_mode: false
+    allowed_imports: null  # null表示允许所有导入
+    
+  # 文件访问
+  file_access:
+    read_only_paths: []
+    forbidden_paths: ["/etc", "/root"]
+
