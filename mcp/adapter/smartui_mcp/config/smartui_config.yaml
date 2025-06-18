@@ -1,0 +1,303 @@
+# SmartUI MCP 配置文件
+# 智慧感知UI组件的核心配置
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8080
+  debug: false
+  log_level: "INFO"
+  
+# 组件配置
+component:
+  id: "smartui_mcp"
+  name: "SmartUI MCP"
+  version: "1.0.0"
+  description: "智慧感知UI组件，提供智能UI生成和用户行为分析"
+  
+# 架构层级配置
+architecture:
+  level: "component"  # 组件级
+  supported_orchestrators:
+    - "workflow"      # 工作流级
+    - "product"       # 产品级
+
+# 编排器配置
+orchestrators:
+  # 产品级编排器 (coding_plugin_orchestrator)
+  product_orchestrator:
+    component_id: "coding_plugin_orchestrator"
+    host: "localhost"
+    port: 8090
+    protocol: "http"
+    endpoints:
+      register: "/api/components/register"
+      unregister: "/api/components/unregister"
+      health: "/api/components/health"
+    
+  # 工作流级编排器 (workflow orchestrator)  
+  workflow_orchestrator:
+    component_id: "workflow_orchestrator"
+    host: "localhost"
+    port: 8091
+    protocol: "http"
+    endpoints:
+      register: "/api/adapters/register"
+      unregister: "/api/adapters/unregister"
+      health: "/api/adapters/health"
+
+# 发布管理MCP配置
+release_management:
+  host: "localhost"
+  port: 8095
+  protocol: "http"
+  endpoints:
+    register: "/api/modules/register"
+    build: "/api/build/request"
+    test: "/api/test/request"
+    deploy: "/api/deploy/request"
+    health: "/api/modules/health"
+
+# 核心智能组件配置
+core_intelligence:
+  # 用户分析器配置
+  user_analyzer:
+    enabled: true
+    analysis_depth: "full"  # full, basic, minimal
+    tracking_enabled: true
+    session_timeout: 1800  # 30分钟
+    behavior_patterns:
+      - "click_patterns"
+      - "scroll_behavior"
+      - "time_on_page"
+      - "navigation_flow"
+    
+  # 决策引擎配置
+  decision_engine:
+    enabled: true
+    decision_mode: "intelligent"  # intelligent, rule_based, hybrid
+    response_time_target: 100  # 毫秒
+    rules:
+      - id: "theme_adaptation"
+        condition: "user.preference.theme == 'auto'"
+        action: "adapt_theme_to_time"
+      - id: "layout_optimization"
+        condition: "screen.width < 768"
+        action: "switch_to_mobile_layout"
+      - id: "accessibility_enhancement"
+        condition: "user.accessibility_needs.high_contrast"
+        action: "enable_high_contrast_mode"
+    
+  # API状态管理器配置
+  api_state_manager:
+    enabled: true
+    sync_interval: 5000  # 5秒
+    cache_enabled: true
+    cache_ttl: 300  # 5分钟
+    retry_attempts: 3
+    retry_delay: 1000  # 1秒
+    
+  # UI生成器配置
+  ui_generator:
+    enabled: true
+    generation_mode: "dynamic"  # dynamic, template_based, hybrid
+    performance_mode: "balanced"  # fast, balanced, quality
+    cache_generated_ui: true
+    supported_layouts:
+      - "dashboard"
+      - "form"
+      - "list"
+      - "grid"
+      - "kanban"
+      - "timeline"
+    
+  # MCP集成配置
+  mcp_integration:
+    enabled: true
+    protocol_version: "1.0"
+    message_timeout: 30000  # 30秒
+    max_concurrent_requests: 100
+
+# UI渲染器配置
+ui_renderer:
+  # 固定UI渲染器配置
+  fixed_ui_renderer:
+    enabled: true
+    template_engine: "jinja2"
+    static_assets_path: "/static"
+    cache_templates: true
+    
+  # 智能UI适配器配置
+  smart_ui_adapter:
+    enabled: true
+    adaptation_speed: "fast"  # fast, medium, slow
+    theme_switching_enabled: true
+    responsive_breakpoints:
+      mobile: 768
+      tablet: 1024
+      desktop: 1200
+    
+  # 响应式组件配置
+  reactive_components:
+    enabled: true
+    update_strategy: "incremental"  # full, incremental, lazy
+    virtual_scrolling: true
+    lazy_loading: true
+    
+  # VS Code接口配置
+  vscode_interface:
+    enabled: true
+    extension_id: "smartui-mcp"
+    command_prefix: "smartui"
+
+# MCP通信配置
+mcp_communication:
+  # MCP协议配置
+  mcp_protocol:
+    version: "1.0"
+    encoding: "utf-8"
+    compression: "gzip"
+    max_message_size: 1048576  # 1MB
+    
+  # 事件监听器配置
+  event_listener:
+    enabled: true
+    event_buffer_size: 1000
+    batch_processing: true
+    batch_size: 50
+    batch_timeout: 1000  # 1秒
+    
+  # 协调器集成配置
+  coordinator_integration:
+    enabled: true
+    registration_retry_attempts: 3
+    registration_retry_delay: 5000  # 5秒
+    heartbeat_interval: 30000  # 30秒
+    health_check_timeout: 10000  # 10秒
+
+# 主题配置
+themes:
+  default: "light"
+  available_themes:
+    - name: "light"
+      primary_color: "#667eea"
+      secondary_color: "#764ba2"
+      background_color: "#ffffff"
+      text_color: "#333333"
+      
+    - name: "dark"
+      primary_color: "#667eea"
+      secondary_color: "#764ba2"
+      background_color: "#1a1a1a"
+      text_color: "#ffffff"
+      
+    - name: "high_contrast"
+      primary_color: "#000000"
+      secondary_color: "#ffffff"
+      background_color: "#ffffff"
+      text_color: "#000000"
+      
+    - name: "blue"
+      primary_color: "#2196F3"
+      secondary_color: "#1976D2"
+      background_color: "#f5f5f5"
+      text_color: "#333333"
+
+# 可访问性配置
+accessibility:
+  enabled: true
+  features:
+    screen_reader_support: true
+    keyboard_navigation: true
+    high_contrast_mode: true
+    large_fonts: true
+    reduced_motion: true
+    focus_indicators: true
+  aria_labels: true
+  semantic_html: true
+
+# 性能配置
+performance:
+  # 缓存配置
+  cache:
+    enabled: true
+    type: "memory"  # memory, redis, file
+    max_size: 100  # MB
+    ttl: 3600  # 1小时
+    
+  # 优化配置
+  optimization:
+    minify_css: true
+    minify_js: true
+    compress_images: true
+    lazy_load_images: true
+    virtual_scrolling: true
+    code_splitting: true
+    
+  # 监控配置
+  monitoring:
+    enabled: true
+    metrics_collection: true
+    performance_tracking: true
+    error_tracking: true
+    user_timing: true
+
+# 安全配置
+security:
+  # CORS配置
+  cors:
+    enabled: true
+    allowed_origins: ["*"]
+    allowed_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allowed_headers: ["*"]
+    
+  # 认证配置
+  authentication:
+    enabled: false
+    type: "jwt"  # jwt, oauth, basic
+    
+  # 授权配置
+  authorization:
+    enabled: false
+    rbac: false
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  handlers:
+    - type: "console"
+      level: "INFO"
+    - type: "file"
+      level: "DEBUG"
+      filename: "smartui_mcp.log"
+      max_bytes: 10485760  # 10MB
+      backup_count: 5
+      
+# 开发配置
+development:
+  debug: true
+  hot_reload: true
+  auto_restart: true
+  profiling: false
+  
+# 测试配置
+testing:
+  enabled: true
+  test_data_path: "./tests/data"
+  mock_external_services: true
+  coverage_threshold: 90
+
+# 部署配置
+deployment:
+  environment: "development"  # development, staging, production
+  container:
+    image: "smartui-mcp:latest"
+    port: 8080
+    health_check: "/health"
+  scaling:
+    min_instances: 1
+    max_instances: 5
+    cpu_threshold: 70
+    memory_threshold: 80
+

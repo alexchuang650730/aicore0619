@@ -1,0 +1,285 @@
+[tool.black]
+# 目标Python版本
+target-version = ['py311']
+
+# 行长度
+line-length = 88
+
+# 包含的文件模式
+include = '\.pyi?$'
+
+# 排除的文件和目录
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | __pycache__
+)/
+'''
+
+# 强制排除，即使在命令行中指定也会排除
+force-exclude = '''
+/(
+  | \.pytest_cache
+  | \.coverage
+  | htmlcov
+  | \.eggs
+)/
+'''
+
+# 跳过字符串标准化
+skip-string-normalization = false
+
+# 跳过魔术尾随逗号
+skip-magic-trailing-comma = false
+
+# 预览模式（启用实验性功能）
+preview = false
+
+[tool.isort]
+# 配置文件
+profile = "black"
+
+# 行长度（与black保持一致）
+line_length = 88
+
+# 多行输出模式
+multi_line_output = 3
+
+# 包含尾随逗号
+include_trailing_comma = true
+
+# 强制网格包装
+force_grid_wrap = 0
+
+# 使用括号
+use_parentheses = true
+
+# 确保diff输出
+ensure_newline_before_comments = true
+
+# 已知的第一方库
+known_first_party = ["src"]
+
+# 已知的第三方库
+known_third_party = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "jinja2",
+    "yaml",
+    "aiohttp",
+    "websockets",
+    "pytest",
+    "asyncio"
+]
+
+# 导入段落之间的行数
+lines_after_imports = 2
+
+# 排除的文件
+skip_glob = [
+    "**/__pycache__/**",
+    "**/.*/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/*.egg-info/**"
+]
+
+[tool.mypy]
+# Python版本
+python_version = "3.11"
+
+# 严格模式
+strict = true
+
+# 警告设置
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+# 错误设置
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+
+# 导入设置
+ignore_missing_imports = true
+follow_imports = "silent"
+show_column_numbers = true
+show_error_codes = true
+
+# 缓存设置
+cache_dir = ".mypy_cache"
+
+# 排除的文件
+exclude = [
+    "build/",
+    "dist/",
+    "docs/",
+    "tests/",
+    "__pycache__/",
+    "*.egg-info/"
+]
+
+# 每个模块的设置
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "docs.*"
+ignore_errors = true
+
+[tool.pytest.ini_options]
+# 测试目录
+testpaths = ["tests"]
+
+# 最小版本
+minversion = "7.0"
+
+# 添加选项
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+    "--tb=short",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=90"
+]
+
+# 标记
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+    "performance: marks tests as performance tests",
+    "security: marks tests as security tests"
+]
+
+# 过滤警告
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning"
+]
+
+# 异步测试支持
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+# 源代码目录
+source = ["src"]
+
+# 排除的文件
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/.*",
+    "setup.py",
+    "*/site-packages/*"
+]
+
+# 分支覆盖
+branch = true
+
+# 并发支持
+concurrency = ["thread", "multiprocessing"]
+
+[tool.coverage.report]
+# 排除的行
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod"
+]
+
+# 忽略错误
+ignore_errors = true
+
+# 显示缺失的行
+show_missing = true
+
+# 精度
+precision = 2
+
+# 跳过覆盖的文件
+skip_covered = false
+
+# 跳空文件
+skip_empty = false
+
+[tool.coverage.html]
+# HTML报告目录
+directory = "htmlcov"
+
+[tool.coverage.xml]
+# XML报告文件
+output = "coverage.xml"
+
+[tool.bandit]
+# 排除的路径
+exclude_dirs = ["tests", "docs", "build", "dist"]
+
+# 跳过的测试
+skips = ["B101", "B601"]
+
+# 严重性级别
+severity = "medium"
+
+# 置信度级别
+confidence = "medium"
+
+[tool.interrogate]
+# 忽略的文件
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = true
+ignore-semiprivate = true
+ignore-private = true
+ignore-property-decorators = true
+ignore-module = true
+ignore-nested-functions = true
+
+# 失败阈值
+fail-under = 80
+
+# 排除的文件
+exclude = ["setup.py", "docs", "build", "tests"]
+
+# 详细输出
+verbose = 2
+
+# 安静模式
+quiet = false
+
+# 白名单正则表达式
+whitelist-regex = []
+
+# 颜色输出
+color = true
+
