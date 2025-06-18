@@ -1,0 +1,17 @@
+/* Enterprise Smart UI MCP - VS Code风格样式 */
+
+/* 占位符文件 - 将基于ui_design.html的样式进行优化 */
+
+:root {
+    --vscode-bg: #1e1e1e;
+    --vscode-sidebar: #252526;
+    --vscode-border: #3c3c3c;
+    --vscode-accent: #007acc;
+    --vscode-text: #cccccc;
+    --vscode-text-bright: #ffffff;
+    --enterprise-green: #4ec9b0;
+    --enterprise-warning: #dcdcaa;
+}
+
+/* 基础样式将在实现阶段添加 */
+

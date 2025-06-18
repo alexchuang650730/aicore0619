@@ -1,0 +1,86 @@
+routing_rules:
+  # 基于系统规模的路由
+  system_scale:
+    small: "local_model_mcp"        # 小型系统，本地处理
+    medium: "cloud_search_mcp"      # 中型系统，云端处理
+    large: "cloud_search_mcp"       # 大型系统，云端高级模型
+    enterprise: "cloud_search_mcp"  # 企业级系统，云端处理
+    
+  # 基于架构复杂度的路由
+  architecture_complexity:
+    simple: "local_model_mcp"       # 简单架构
+    moderate: "cloud_search_mcp"    # 中等复杂度
+    complex: "cloud_search_mcp"     # 复杂架构
+    distributed: "cloud_search_mcp" # 分布式架构
+    
+  # 基于技术栈类型的路由
+  technology_type:
+    traditional: "local_model_mcp"  # 传统技术栈
+    modern: "cloud_search_mcp"      # 现代技术栈
+    cloud_native: "cloud_search_mcp" # 云原生技术
+    ai_ml: "cloud_search_mcp"       # AI/ML相关技术
+    
+  # 基于性能要求的路由
+  performance_requirements:
+    basic: "local_model_mcp"        # 基础性能要求
+    high: "cloud_search_mcp"        # 高性能要求
+    real_time: "cloud_search_mcp"   # 实时性要求
+    massive_scale: "cloud_search_mcp" # 大规模处理
+    
+  # 基于安全级别的路由
+  security_level:
+    basic: "local_model_mcp"        # 基础安全
+    enhanced: "cloud_search_mcp"    # 增强安全
+    enterprise: "cloud_search_mcp"  # 企业级安全
+    government: "cloud_search_mcp"  # 政府级安全
+    
+  # 基于部署环境的路由
+  deployment_environment:
+    on_premise: "local_model_mcp"   # 本地部署
+    cloud: "cloud_search_mcp"       # 云部署
+    hybrid: "cloud_search_mcp"      # 混合部署
+    edge: "cloud_search_mcp"        # 边缘计算
+
+# 特殊路由规则
+special_routing:
+  # OCR系统架构特殊路由
+  ocr_system_architecture:
+    primary: "cloud_search_mcp"     # 主要使用云端模型
+    fallback: "local_model_mcp"     # 备用本地模型
+    models: ["claude", "gemini", "mistral"] # 优先模型顺序
+    
+  # 多模型融合架构路由
+  multi_model_fusion:
+    primary: "cloud_search_mcp"
+    fallback: "local_model_mcp"
+    models: ["claude", "gemini"]
+    
+  # 高可用系统架构路由
+  high_availability_system:
+    primary: "cloud_search_mcp"
+    fallback: "local_model_mcp"
+    models: ["claude", "gemini"]
+
+# 架构模式路由
+pattern_routing:
+  microservices:
+    complexity: "cloud_search_mcp"
+    models: ["claude", "gemini"]
+    
+  event_driven:
+    complexity: "cloud_search_mcp"
+    models: ["claude", "gemini"]
+    
+  layered_architecture:
+    complexity: "local_model_mcp"
+    models: ["mistral", "qwen"]
+
+# 路由决策权重
+routing_weights:
+  system_scale: 0.25
+  architecture_complexity: 0.25
+  technology_type: 0.2
+  performance_requirements: 0.15
+  security_level: 0.1
+  deployment_environment: 0.05
+

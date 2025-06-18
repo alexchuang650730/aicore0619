@@ -1,0 +1,163 @@
+{
+  "mcp_name": "Operations Workflow MCP",
+  "test_execution_time": "2025-06-15T22:49:10.855224",
+  "total_tests": 3,
+  "passed": 3,
+  "failed": 0,
+  "test_results": [
+    {
+      "test_name": "文件管理能力测试",
+      "status": "SUCCESS",
+      "operations": [
+        "复制 development_intervention_mcp.py -> mcp/adapter/development_intervention_mcp/development_intervention_mcp.py",
+        "复制 development_intervention_mcp_new.py -> mcp/adapter/development_intervention_mcp/development_intervention_mcp_new.py",
+        "复制 operations_mcp.py -> mcp/workflow/operations_workflow_mcp/src/operations_mcp.py",
+        "复制 smart_intervention_mcp.py -> mcp/workflow/operations_workflow_mcp/src/smart_intervention_mcp.py",
+        "复制 continuous_refactoring_mcp.py -> mcp/workflow/operations_workflow_mcp/src/continuous_refactoring_mcp.py",
+        "复制 interaction_log_manager.py -> mcp/adapter/interaction_log_manager/interaction_log_manager.py",
+        "复制 directory_structure_mcp.py -> mcp/adapter/directory_structure_mcp/directory_structure_mcp.py",
+        "复制 mcp_directory_structure_standard.md -> workflow_howto/mcp_directory_structure_standard.md"
+      ],
+      "files_processed": 8,
+      "errors": []
+    },
+    {
+      "test_name": "目录重组能力测试",
+      "status": "SUCCESS",
+      "operations": [
+        "检测到错位文件: workflow_coordinator_design.py 应在 workflow",
+        "检测到错位文件: ocr_workflow_interface.py 应在 workflow",
+        "检测到错位文件: test_ocr_workflow.py 应在 workflow"
+      ],
+      "directories_created": 0,
+      "files_moved": 0,
+      "errors": []
+    },
+    {
+      "test_name": "版本控制能力测试",
+      "status": "SUCCESS",
+      "operations": [
+        "检测到 10 个文件变更"
+      ],
+      "git_operations": [
+        "添加所有更改到Git暂存区",
+        "提交更改: 🤖 Operations Workflow MCP自动提交: 文件管理和目录重组 - 2025-06-15 22:49:10",
+        "准备推送到GitHub远程仓库"
+      ],
+      "errors": []
+    }
+  ],
+  "operation_log": [
+    {
+      "timestamp": "2025-06-15T22:49:10.823096",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 development_intervention_mcp.py -> mcp/adapter/development_intervention_mcp/development_intervention_mcp.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.823358",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 development_intervention_mcp_new.py -> mcp/adapter/development_intervention_mcp/development_intervention_mcp_new.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.823603",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 operations_mcp.py -> mcp/workflow/operations_workflow_mcp/src/operations_mcp.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.823921",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 smart_intervention_mcp.py -> mcp/workflow/operations_workflow_mcp/src/smart_intervention_mcp.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.824129",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 continuous_refactoring_mcp.py -> mcp/workflow/operations_workflow_mcp/src/continuous_refactoring_mcp.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.824377",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 interaction_log_manager.py -> mcp/adapter/interaction_log_manager/interaction_log_manager.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.826651",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 directory_structure_mcp.py -> mcp/adapter/directory_structure_mcp/directory_structure_mcp.py",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.826879",
+      "operation": "文件复制",
+      "status": "SUCCESS",
+      "details": "复制 mcp_directory_structure_standard.md -> workflow_howto/mcp_directory_structure_standard.md",
+      "task": "文件管理测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.829868",
+      "operation": "文件位置检查",
+      "status": "INFO",
+      "details": "检测到错位文件: workflow_coordinator_design.py 应在 workflow",
+      "task": "目录重组测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.829932",
+      "operation": "文件位置检查",
+      "status": "INFO",
+      "details": "检测到错位文件: ocr_workflow_interface.py 应在 workflow",
+      "task": "目录重组测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.829962",
+      "operation": "文件位置检查",
+      "status": "INFO",
+      "details": "检测到错位文件: test_ocr_workflow.py 应在 workflow",
+      "task": "目录重组测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.833803",
+      "operation": "Git状态检查",
+      "status": "INFO",
+      "details": "检测到 10 个文件变更",
+      "task": "版本控制测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.844248",
+      "operation": "Git添加",
+      "status": "SUCCESS",
+      "details": "添加所有更改到Git暂存区",
+      "task": "版本控制测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.855075",
+      "operation": "Git提交",
+      "status": "SUCCESS",
+      "details": "提交更改: 🤖 Operations Workflow MCP自动提交: 文件管理和目录重组 - 2025-06-15 22:49:10",
+      "task": "版本控制测试"
+    },
+    {
+      "timestamp": "2025-06-15T22:49:10.855160",
+      "operation": "Git推送准备",
+      "status": "INFO",
+      "details": "准备推送到GitHub远程仓库",
+      "task": "版本控制测试"
+    }
+  ],
+  "summary_stats": {
+    "files_processed": 8,
+    "directories_created": 0,
+    "git_operations": 3,
+    "total_operations": 15
+  }
+}

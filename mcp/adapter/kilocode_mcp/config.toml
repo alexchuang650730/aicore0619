@@ -1,0 +1,162 @@
+# KiloCode MCP 配置文件
+# 兜底创建引擎的核心配置
+
+[mcp_info]
+name = "kilocode_mcp"
+version = "2.0.0"
+description = "兜底创建引擎 - 当所有其他MCP都解决不了时的最后创建方案"
+type = "fallback_creator"
+category = "core_engine"
+
+[capabilities]
+# 支持的工作流类型
+supported_workflows = [
+    "requirements_analysis",
+    "architecture_design", 
+    "coding_implementation",
+    "testing_verification",
+    "deployment_release",
+    "monitoring_operations"
+]
+
+# 支持的创建类型
+supported_creation_types = [
+    "document",     # PPT、报告、方案
+    "code",         # 应用、脚本、工具
+    "prototype",    # demo、验证、示例
+    "tool"          # 测试工具、部署脚本
+]
+
+# 支持的编程语言
+supported_languages = [
+    "python",
+    "javascript", 
+    "html",
+    "css",
+    "bash",
+    "yaml",
+    "json"
+]
+
+[ai_assistance]
+# AI协助配置
+enable_ai_assistance = true
+primary_ai = "gemini_mcp"
+fallback_ai = "claude_mcp"
+ai_timeout = 30
+ai_retry_count = 2
+
+[creation_strategies]
+# 各工作流的创建策略配置
+
+[creation_strategies.requirements_analysis]
+priority_types = ["document", "prototype"]
+default_format = "ppt_outline"
+enable_business_templates = true
+include_data_analysis = true
+
+[creation_strategies.architecture_design]
+priority_types = ["document", "code"]
+default_format = "architecture_diagram"
+enable_framework_generation = true
+include_tech_stack_recommendation = true
+
+[creation_strategies.coding_implementation]
+priority_types = ["code", "tool"]
+default_language = "python"
+enable_game_development = true
+include_complete_examples = true
+code_quality_level = "production"
+
+[creation_strategies.testing_verification]
+priority_types = ["tool", "code"]
+default_framework = "unittest"
+enable_automation = true
+include_performance_tests = false
+
+[creation_strategies.deployment_release]
+priority_types = ["tool", "code"]
+default_platform = "linux"
+enable_containerization = true
+include_ci_cd = true
+
+[creation_strategies.monitoring_operations]
+priority_types = ["tool", "code"]
+default_metrics = ["cpu", "memory", "disk"]
+enable_alerting = true
+include_dashboards = false
+
+[quality_control]
+# 质量控制配置
+min_code_lines = 10
+max_code_lines = 1000
+enable_syntax_check = true
+enable_security_scan = false
+require_documentation = true
+require_examples = true
+
+[logging]
+# 日志配置
+log_level = "INFO"
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+log_file = "/var/log/kilocode_mcp.log"
+enable_performance_logging = true
+
+[performance]
+# 性能配置
+max_concurrent_requests = 5
+request_timeout = 120
+cache_enabled = true
+cache_ttl = 3600
+
+[templates]
+# 模板配置路径
+template_directory = "/opt/powerautomation/mcp/kilocode_mcp/templates"
+custom_templates_enabled = true
+
+[templates.ppt]
+default_slides = 8
+include_cover = true
+include_toc = true
+include_conclusion = true
+
+[templates.code]
+include_header_comments = true
+include_main_function = true
+include_error_handling = true
+include_logging = true
+
+[templates.game]
+default_engine = "pygame"
+include_game_loop = true
+include_collision_detection = true
+include_scoring_system = true
+
+[security]
+# 安全配置
+enable_input_validation = true
+max_input_length = 10000
+blocked_keywords = ["rm -rf", "format c:", "del /f"]
+enable_code_sandboxing = false
+
+[integration]
+# 集成配置
+coordinator_endpoint = "http://localhost:8080/coordinator"
+coordinator_timeout = 30
+enable_health_check = true
+health_check_interval = 60
+
+[fallback]
+# 兜底机制配置
+enable_generic_fallback = true
+fallback_message = "请提供更多信息以便创建更好的解决方案"
+enable_suggestion_system = true
+max_fallback_attempts = 3
+
+[development]
+# 开发配置
+debug_mode = false
+enable_mock_ai = false
+enable_test_mode = false
+verbose_logging = false
+

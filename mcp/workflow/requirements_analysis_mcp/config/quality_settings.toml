@@ -1,0 +1,86 @@
+[quality]
+# 质量阈值设置
+min_confidence = 0.7
+min_accuracy = 0.85
+max_processing_time = 300
+min_solution_count = 3
+max_solution_count = 5
+
+[performance]
+# 性能设置
+enable_caching = true
+cache_ttl = 3600
+enable_compression = true
+max_memory_usage = "2GB"
+concurrent_requests = 5
+
+[cost_optimization]
+# 成本优化设置
+prefer_local = true
+cost_threshold = 0.05  # 美元
+quality_cost_balance = 0.7  # 0-1之间，越高越偏向质量
+enable_cost_tracking = true
+
+[fallback]
+# 降级策略
+enable_fallback = true
+fallback_quality_threshold = 0.6
+max_fallback_attempts = 2
+fallback_timeout = 60
+
+[analysis_quality]
+# 分析质量控制
+requirement_parsing_confidence = 0.8
+feasibility_analysis_confidence = 0.75
+solution_generation_confidence = 0.8
+risk_assessment_confidence = 0.7
+
+[output_quality]
+# 输出质量控制
+min_solution_detail_length = 100  # 字符
+max_solution_detail_length = 2000  # 字符
+require_implementation_steps = true
+require_technology_stack = true
+require_timeline_estimate = true
+
+[domain_specific_quality]
+# 领域特定质量设置
+ocr_requirements = {
+    min_accuracy_requirement = 0.9,
+    require_language_support = true,
+    require_performance_metrics = true
+}
+
+nlp_requirements = {
+    min_accuracy_requirement = 0.85,
+    require_model_specification = true,
+    require_data_requirements = true
+}
+
+web_requirements = {
+    min_accuracy_requirement = 0.8,
+    require_framework_selection = true,
+    require_deployment_strategy = true
+}
+
+[validation_rules]
+# 验证规则
+required_fields = [
+    "requirement_text",
+    "domain_type",
+    "complexity_level"
+]
+
+optional_fields = [
+    "context",
+    "constraints",
+    "priority_factors",
+    "timeline_requirements"
+]
+
+field_constraints = {
+    requirement_text = { min_length = 10, max_length = 10000 },
+    domain_type = { allowed_values = ["ocr", "nlp", "web", "ai", "vision", "other"] },
+    complexity_level = { allowed_values = ["simple", "medium", "complex"] }
+}
+

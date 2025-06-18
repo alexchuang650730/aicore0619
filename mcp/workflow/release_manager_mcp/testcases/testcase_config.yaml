@@ -1,0 +1,38 @@
+test_cases:
+- category: unit
+  id: TC001
+  name: 模块初始化测试
+  priority: high
+  timeout: 10
+- category: unit
+  id: TC002
+  name: 核心功能测试
+  priority: high
+  timeout: 15
+- category: unit
+  id: TC003
+  name: 异步操作测试
+  priority: medium
+  timeout: 20
+- category: integration
+  id: TC004
+  name: 集成通信测试
+  priority: medium
+  timeout: 25
+- category: performance
+  id: TC005
+  name: 性能基准测试
+  priority: low
+  timeout: 60
+test_config:
+  async_support: true
+  framework_version: 1.0.0
+  mock_enabled: true
+  module_name: release_manager_mcp
+  module_type: workflow
+  test_environment: development
+  timeout: 30
+test_data:
+  expected_outputs: {}
+  mock_responses: {}
+  test_inputs: {}

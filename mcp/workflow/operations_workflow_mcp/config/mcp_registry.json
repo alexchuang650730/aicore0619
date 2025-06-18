@@ -1,0 +1,114 @@
+{
+  "development_intervention_mcp": {
+    "name": "development_intervention_mcp",
+    "type": "adapter",
+    "path": "mcp/adapter/development_intervention_mcp",
+    "class_name": "DevelopmentInterventionMCP",
+    "status": "active",
+    "capabilities": [
+      "code_analysis",
+      "intervention_decision",
+      "auto_fix",
+      "quality_check"
+    ],
+    "version": "1.0.0",
+    "description": "智能开发介入MCP，提供代码分析和自动修复功能",
+    "dependencies": [],
+    "registered_at": "2025-06-15T23:11:40.318777",
+    "last_health_check": "2025-06-15T23:24:06.862837"
+  },
+  "local_model_mcp": {
+    "name": "local_model_mcp",
+    "type": "adapter",
+    "path": "mcp/adapter/local_model_mcp",
+    "class_name": "LocalModelMCP",
+    "status": "error",
+    "capabilities": [
+      "initialize",
+      "chat_completion",
+      "text_generation",
+      "ocr_processing",
+      "process_ocr_workflow",
+      "get_status",
+      "get_capabilities",
+      "shutdown",
+      "create_local_model_mcp",
+      "main"
+    ],
+    "version": "1.0.0",
+    "description": "统一的本地模型MCP适配器\n支持Qwen 8B和Mistral 12B多模型配置，集成OCR功能\n添加OCR工作流接口支持",
+    "dependencies": [],
+    "registered_at": "2025-06-15T23:09:12.443705",
+    "last_health_check": null
+  },
+  "cloud_search_mcp": {
+    "name": "cloud_search_mcp",
+    "type": "adapter",
+    "path": "mcp/adapter/cloud_search_mcp",
+    "class_name": "BaseMCP",
+    "status": "error",
+    "capabilities": [
+      "process",
+      "log_info",
+      "log_error",
+      "log_warning",
+      "performance_monitor",
+      "decorator",
+      "select_optimal_model",
+      "process_image",
+      "resolve_value",
+      "process"
+    ],
+    "version": "1.0.0",
+    "description": "Cloud Search MCP - 统一的云端视觉搜索MCP\n\n基于PowerAutomation架构，参考Gemini MCP和Claude MCP实现，\n提供统一的云端视觉模型接口，支持多模型配置化选择。\n\n作者: PowerAutomation团队\n版本: 1.0.0\n日期: 2025-06-15",
+    "dependencies": [],
+    "registered_at": "2025-06-15T23:09:12.444155",
+    "last_health_check": "2025-06-15T23:24:06.948356"
+  },
+  "kilocode_mcp": {
+    "name": "kilocode_mcp",
+    "type": "adapter",
+    "path": "mcp/adapter/kilocode_mcp",
+    "class_name": "KiloCodeMCP",
+    "status": "error",
+    "capabilities": [
+      "get",
+      "process_request",
+      "draw_snake",
+      "move_snake",
+      "add_block",
+      "check_collision",
+      "draw_food",
+      "randomize",
+      "update",
+      "draw_elements"
+    ],
+    "version": "1.0.0",
+    "description": "KiloCode MCP - 兜底创建引擎 (配置驱动版本)\n基于讨论结论重新设计的kilocode_mcp，支持配置文件驱动\n\n核心理念：\n- 兜底创建：当所有其他MCP都解决不了时，创建解决方案\n- 工作流感知：根据工作流上下文调整创建行为\n- MCP通信：通过coordinator与其他MCP通信，不直接调用外部API\n- 智能适应：根据需求类型智能选择创建策略\n- 配置驱动：所有行为通过配置文件控制",
+    "dependencies": [],
+    "registered_at": "2025-06-15T23:09:12.444504",
+    "last_health_check": "2025-06-15T23:24:06.950258"
+  },
+  "directory_structure_mcp": {
+    "name": "directory_structure_mcp",
+    "type": "adapter",
+    "path": "mcp/adapter/directory_structure_mcp",
+    "class_name": "Directorystructuremcp",
+    "status": "error",
+    "capabilities": [
+      "start",
+      "stop",
+      "execute",
+      "check_directory_structure",
+      "fix_directory_structure",
+      "validate_mcp_structure",
+      "get_status",
+      "health_check"
+    ],
+    "version": "1.0.0",
+    "description": "目录结构检查子MCP\n负责项目目录结构的合规性检查和自动修复",
+    "dependencies": [],
+    "registered_at": "2025-06-15T23:09:12.444856",
+    "last_health_check": null
+  }
+}

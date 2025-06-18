@@ -1,0 +1,40 @@
+[
+  {
+    "method_name": "Mistral Pixtral 12B",
+    "success": false,
+    "processing_time": 0.20441555976867676,
+    "confidence": 0.0,
+    "accuracy": {
+      "overall_accuracy": 0.0
+    },
+    "error": "API Error 401: {\"error\":{\"message\":\"No auth credentials found\",\"code\":401}}"
+  },
+  {
+    "method_name": "Traditional OCR (Simulated)",
+    "success": true,
+    "processing_time": 2.5,
+    "confidence": 0.85,
+    "accuracy": {
+      "print_number_found": true,
+      "print_time_found": true,
+      "form_title_found": true,
+      "barcode1_found": false,
+      "barcode2_found": false,
+      "insured_name_found": true,
+      "gender_found": true,
+      "birth_date_found": true,
+      "age_found": true,
+      "address_found": true,
+      "insurance_name_found": true,
+      "payment_period_found": true,
+      "insurance_amount_found": true,
+      "premium_found": true,
+      "additional_premium_found": true,
+      "additional_amount_found": true,
+      "overall_accuracy": 0.875,
+      "correct_fields": 14,
+      "total_fields": 16
+    },
+    "error": ""
+  }
+]

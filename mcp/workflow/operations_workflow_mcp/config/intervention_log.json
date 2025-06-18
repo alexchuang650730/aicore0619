@@ -1,0 +1,167 @@
+{
+  "completed_interventions": [
+    {
+      "id": "INT_20250615_231028_2",
+      "type": "configuration_error",
+      "priority": "critical",
+      "description": "修复配置错误",
+      "source": "operations_workflow_mcp",
+      "target_mcp": "development_intervention_mcp",
+      "parameters": {
+        "config_file": "config.toml"
+      },
+      "created_at": "2025-06-15T23:10:28.306944",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:10:28.307024",
+      "completed_at": "2025-06-15T23:10:29.308374",
+      "result": {
+        "action": "configuration_fix",
+        "configs_updated": 2,
+        "validation_passed": true,
+        "success": true
+      },
+      "error_message": null
+    },
+    {
+      "id": "INT_20250615_231028_0",
+      "type": "directory_structure",
+      "priority": "high",
+      "description": "修复目录结构违规",
+      "source": "operations_workflow_mcp",
+      "target_mcp": "directory_structure_mcp",
+      "parameters": {
+        "target_directory": "/mcp"
+      },
+      "created_at": "2025-06-15T23:10:28.306889",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:10:29.308856",
+      "completed_at": "2025-06-15T23:10:30.310138",
+      "result": {
+        "action": "directory_structure_fix",
+        "fixed_issues": [
+          "移动错位文件",
+          "创建缺失目录",
+          "更新文档"
+        ],
+        "files_affected": 5,
+        "success": true
+      },
+      "error_message": null
+    },
+    {
+      "id": "INT_20250615_231028_1",
+      "type": "code_quality",
+      "priority": "medium",
+      "description": "修复代码质量问题",
+      "source": "development_intervention_mcp",
+      "target_mcp": "development_intervention_mcp",
+      "parameters": {
+        "files": [
+          "test.py",
+          "main.py"
+        ]
+      },
+      "created_at": "2025-06-15T23:10:28.306927",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:10:30.310715",
+      "completed_at": "2025-06-15T23:10:32.312935",
+      "result": {
+        "action": "code_quality_fix",
+        "issues_found": 8,
+        "issues_fixed": 6,
+        "suggestions": [
+          "添加类型注解",
+          "优化函数复杂度",
+          "移除未使用导入"
+        ],
+        "success": true
+      },
+      "error_message": null
+    },
+    {
+      "id": "INT_20250615_232153_2",
+      "type": "configuration_error",
+      "priority": "critical",
+      "description": "修复配置错误",
+      "source": "operations_workflow_mcp",
+      "target_mcp": "development_intervention_mcp",
+      "parameters": {
+        "config_file": "config.toml"
+      },
+      "created_at": "2025-06-15T23:21:53.671662",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:21:53.671750",
+      "completed_at": "2025-06-15T23:21:54.672979",
+      "result": {
+        "action": "configuration_fix",
+        "configs_updated": 2,
+        "validation_passed": true,
+        "success": true
+      },
+      "error_message": null
+    },
+    {
+      "id": "INT_20250615_232153_0",
+      "type": "directory_structure",
+      "priority": "high",
+      "description": "修复目录结构违规",
+      "source": "operations_workflow_mcp",
+      "target_mcp": "directory_structure_mcp",
+      "parameters": {
+        "target_directory": "/mcp"
+      },
+      "created_at": "2025-06-15T23:21:53.671627",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:21:54.673776",
+      "completed_at": "2025-06-15T23:21:55.675117",
+      "result": {
+        "action": "directory_structure_fix",
+        "fixed_issues": [
+          "移动错位文件",
+          "创建缺失目录",
+          "更新文档"
+        ],
+        "files_affected": 5,
+        "success": true
+      },
+      "error_message": null
+    },
+    {
+      "id": "INT_20250615_232153_1",
+      "type": "code_quality",
+      "priority": "medium",
+      "description": "修复代码质量问题",
+      "source": "development_intervention_mcp",
+      "target_mcp": "development_intervention_mcp",
+      "parameters": {
+        "files": [
+          "test.py",
+          "main.py"
+        ]
+      },
+      "created_at": "2025-06-15T23:21:53.671650",
+      "status": "completed",
+      "assigned_to": null,
+      "started_at": "2025-06-15T23:21:55.676152",
+      "completed_at": "2025-06-15T23:21:57.678487",
+      "result": {
+        "action": "code_quality_fix",
+        "issues_found": 8,
+        "issues_fixed": 6,
+        "suggestions": [
+          "添加类型注解",
+          "优化函数复杂度",
+          "移除未使用导入"
+        ],
+        "success": true
+      },
+      "error_message": null
+    }
+  ],
+  "last_updated": "2025-06-15T23:21:57.679062"
+}

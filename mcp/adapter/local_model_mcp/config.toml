@@ -1,0 +1,257 @@
+# Local Model MCP 配置文件
+# 统一的本地模型MCP适配器配置
+
+[mcp_info]
+name = "local_model_mcp"
+version = "1.0.0"
+description = "统一的本地模型MCP适配器，支持Qwen 8B和Mistral 12B，集成OCR功能和Mistral OCR"
+type = "local_model_provider"
+category = "ai_models"
+
+[capabilities]
+# 支持的功能
+supported_features = [
+    "text_generation",
+    "chat_completion", 
+    "ocr_processing",
+    "mistral_ocr",
+    "model_switching",
+    "batch_processing",
+    "workflow_processing"
+]
+
+# 支持的模型类型
+supported_models = ["qwen", "mistral", "mistral_ocr"]
+
+# 支持的任务类型
+supported_tasks = [
+    "conversation",
+    "text_generation",
+    "code_generation", 
+    "document_analysis",
+    "ocr_extraction",
+    "handwriting_recognition",
+    "table_extraction",
+    "form_processing"
+]
+
+[models]
+# 默认模型
+default_model = "qwen"
+# 自动模型切换
+auto_switch = true
+# 模型选择策略
+selection_strategy = "task_based"
+
+[models.qwen]
+enabled = true
+model_name = "qwen2.5:8b"
+provider = "ollama"
+base_url = "http://localhost:11434"
+api_endpoint = "/api/generate"
+chat_endpoint = "/api/chat"
+max_tokens = 2048
+temperature = 0.7
+top_p = 0.9
+# 适用任务
+preferred_tasks = ["conversation", "general_text", "code_generation"]
+# 性能配置
+memory_usage = "medium"
+inference_speed = "fast"
+
+[models.mistral]
+enabled = true
+model_name = "mistralai/Mistral-Nemo-Instruct-2407"
+provider = "transformers"
+# 云端API配置 (OpenRouter)
+cloud_base_url = "https://openrouter.ai/api/v1"
+cloud_api_key = "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"
+cloud_model_name = "mistralai/mistral-nemo"
+# 本地配置
+device = "auto"
+torch_dtype = "auto"
+load_in_4bit = true
+load_in_8bit = false
+max_tokens = 2048
+temperature = 0.7
+top_p = 0.9
+# 适用任务
+preferred_tasks = ["document_analysis", "complex_reasoning", "ocr_processing"]
+# 性能配置
+memory_usage = "high"
+inference_speed = "medium"
+
+[ocr]
+enabled = true
+# 支持的语言
+languages = ["zh", "en", "auto"]
+# 输出格式
+output_format = "text"
+# 保持布局
+preserve_layout = true
+# 置信度阈值
+confidence_threshold = 0.6
+# OCR引擎
+engine = "integrated"
+# 预处理
+preprocessing = true
+
+[device]
+# 设备检测
+auto_detect = true
+# 首选设备
+preferred_device = "auto"
+# 设备优先级
+device_priority = ["mps", "cuda", "cpu"]
+# 内存管理
+memory_management = true
+
+[performance]
+# 最大并发请求
+max_concurrent_requests = 3
+# 请求超时
+request_timeout = 120
+# 内存限制 (GB)
+memory_limit_gb = 8
+# 自动卸载不活跃模型
+auto_unload_inactive = true
+# 不活跃时间 (秒)
+inactive_timeout = 300
+# 缓存配置
+cache_enabled = true
+cache_size = 100
+
+[logging]
+# 日志级别
+log_level = "INFO"
+# 日志格式
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+# 日志文件
+log_file = "/var/log/local_model_mcp.log"
+# 性能日志
+enable_performance_logging = true
+# 模型切换日志
+enable_model_switch_logging = true
+
+[api]
+# API端口
+port = 8090
+# 主机地址
+host = "0.0.0.0"
+# API版本
+version = "v1"
+# 启用CORS
+enable_cors = true
+# 健康检查
+health_check_enabled = true
+# 健康检查间隔
+health_check_interval = 60
+
+[integration]
+# MCP协调器
+coordinator_endpoint = "http://localhost:8080/coordinator"
+coordinator_timeout = 30
+# 注册信息
+registration_enabled = true
+# 心跳间隔
+heartbeat_interval = 30
+# 工具注册
+tool_registration_required = true
+
+[security]
+# 输入验证
+enable_input_validation = true
+# 最大输入长度
+max_input_length = 10000
+# 阻止的关键词
+blocked_keywords = ["rm -rf", "format c:", "del /f"]
+# API密钥验证
+api_key_required = false
+# 速率限制
+rate_limiting = true
+# 每分钟最大请求
+max_requests_per_minute = 60
+
+[fallback]
+# 启用降级机制
+enable_fallback = true
+# 降级策略
+fallback_strategy = "switch_model"
+# 最大重试次数
+max_retry_attempts = 3
+# 重试间隔
+retry_interval = 5
+# 降级消息
+fallback_message = "当前模型不可用，已切换到备用模型"
+
+[development]
+# 开发模式
+debug_mode = false
+# 启用模拟模式
+enable_mock_mode = false
+# 详细日志
+verbose_logging = false
+# 测试模式
+test_mode = false
+# 性能分析
+enable_profiling = false
+
+[monitoring]
+# 启用监控
+enabled = true
+# 监控指标
+metrics = ["response_time", "memory_usage", "model_load_time", "error_rate"]
+# 监控间隔
+monitoring_interval = 30
+# 告警阈值
+alert_thresholds = { memory_usage = 80, error_rate = 5, response_time = 10 }
+
+
+
+# Mistral OCR 配置
+[mistral_ocr]
+# 是否启用Mistral OCR
+enabled = true
+# OpenRouter API密钥
+api_key = "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"
+# 基础URL
+base_url = "https://openrouter.ai/api/v1"
+# 模型名称
+model_name = "mistralai/pixtral-12b"
+# 最大重试次数
+max_retries = 3
+# 请求超时
+timeout = 60
+# 温度设置
+temperature = 0.1
+# 最大token数
+max_tokens = 4000
+
+[mistral_ocr.task_types]
+# 支持的任务类型配置
+comprehensive = "全面OCR识别"
+table_focus = "表格重点识别"
+handwriting_focus = "手写重点识别"
+form_focus = "表单重点识别"
+
+[mistral_ocr.quality]
+# 质量设置
+min_confidence = 0.8
+enable_preprocessing = true
+enable_postprocessing = true
+preserve_layout = true
+
+[workflow]
+# OCR工作流配置
+enable_workflow_interface = true
+default_task_type = "comprehensive"
+default_quality_level = "medium"
+default_privacy_level = "normal"
+enable_smart_routing = true
+
+[workflow.routing_rules]
+# 路由规则配置
+high_quality_tasks = ["handwriting", "table_extraction", "form_processing"]
+privacy_sensitive_tasks = ["document_ocr"]
+fast_processing_tasks = ["simple_text"]
+

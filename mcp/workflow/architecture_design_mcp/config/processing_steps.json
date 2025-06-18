@@ -1,0 +1,179 @@
+{
+  "steps": [
+    {
+      "id": "input_validation",
+      "name": "输入验证",
+      "processor": "InputValidator",
+      "required": true,
+      "timeout": 10,
+      "retry_count": 1,
+      "description": "验证需求分析结果和架构设计输入"
+    },
+    {
+      "id": "requirements_analysis",
+      "name": "需求分析解读",
+      "processor": "RequirementsAnalyzer",
+      "required": true,
+      "timeout": 20,
+      "retry_count": 2,
+      "description": "解读需求分析结果，提取架构相关信息"
+    },
+    {
+      "id": "system_scale_assessment",
+      "name": "系统规模评估",
+      "processor": "SystemScaleAssessor",
+      "required": true,
+      "timeout": 15,
+      "retry_count": 2,
+      "description": "评估系统规模和复杂度"
+    },
+    {
+      "id": "technology_stack_analysis",
+      "name": "技术栈分析",
+      "processor": "TechnologyStackAnalyzer",
+      "required": true,
+      "timeout": 25,
+      "retry_count": 2,
+      "description": "分析适合的技术栈选择"
+    },
+    {
+      "id": "adapter_selection",
+      "name": "适配器选择",
+      "processor": "AdapterSelector",
+      "required": true,
+      "timeout": 5,
+      "retry_count": 1,
+      "description": "根据路由规则选择最佳适配器"
+    },
+    {
+      "id": "pattern_matching",
+      "name": "架构模式匹配",
+      "processor": "PatternMatcher",
+      "required": true,
+      "timeout": 45,
+      "retry_count": 3,
+      "description": "匹配合适的架构模式"
+    },
+    {
+      "id": "architecture_design",
+      "name": "架构设计生成",
+      "processor": "ArchitectureDesigner",
+      "required": true,
+      "timeout": 90,
+      "retry_count": 3,
+      "description": "生成详细的架构设计方案"
+    },
+    {
+      "id": "scalability_analysis",
+      "name": "可扩展性分析",
+      "processor": "ScalabilityAnalyzer",
+      "required": false,
+      "timeout": 30,
+      "retry_count": 2,
+      "description": "分析架构的可扩展性",
+      "conditions": {
+        "enable_scalability_analysis": true
+      }
+    },
+    {
+      "id": "security_analysis",
+      "name": "安全性分析",
+      "processor": "SecurityAnalyzer",
+      "required": false,
+      "timeout": 35,
+      "retry_count": 2,
+      "description": "分析架构的安全性",
+      "conditions": {
+        "enable_security_analysis": true
+      }
+    },
+    {
+      "id": "performance_optimization",
+      "name": "性能优化建议",
+      "processor": "PerformanceOptimizer",
+      "required": false,
+      "timeout": 25,
+      "retry_count": 2,
+      "description": "提供性能优化建议",
+      "conditions": {
+        "enable_performance_optimization": true
+      }
+    },
+    {
+      "id": "best_practices_integration",
+      "name": "最佳实践集成",
+      "processor": "BestPracticesIntegrator",
+      "required": true,
+      "timeout": 30,
+      "retry_count": 2,
+      "description": "集成行业最佳实践"
+    },
+    {
+      "id": "deployment_strategy",
+      "name": "部署策略设计",
+      "processor": "DeploymentStrategist",
+      "required": true,
+      "timeout": 25,
+      "retry_count": 2,
+      "description": "设计部署和运维策略"
+    },
+    {
+      "id": "architecture_validation",
+      "name": "架构验证",
+      "processor": "ArchitectureValidator",
+      "required": true,
+      "timeout": 20,
+      "retry_count": 2,
+      "description": "验证架构设计的合理性"
+    },
+    {
+      "id": "result_formatting",
+      "name": "结果格式化",
+      "processor": "ResultFormatter",
+      "required": true,
+      "timeout": 15,
+      "retry_count": 1,
+      "description": "格式化最终架构设计结果"
+    },
+    {
+      "id": "quality_assessment",
+      "name": "质量评估",
+      "processor": "QualityAssessor",
+      "required": false,
+      "timeout": 20,
+      "retry_count": 1,
+      "description": "评估架构设计质量",
+      "conditions": {
+        "min_confidence_threshold": "> 0.75"
+      }
+    }
+  ],
+  "error_handling": {
+    "on_step_failure": "retry_or_skip",
+    "on_critical_failure": "abort_workflow",
+    "fallback_adapter": "local_model_mcp",
+    "critical_steps": ["input_validation", "architecture_design", "architecture_validation"]
+  },
+  "parallel_execution": {
+    "enabled": true,
+    "parallel_groups": [
+      {
+        "group_id": "analysis_group",
+        "steps": ["scalability_analysis", "security_analysis", "performance_optimization"],
+        "execution_mode": "parallel"
+      }
+    ]
+  },
+  "conditional_execution": {
+    "skip_conditions": {
+      "security_analysis": "security_level == 'basic'",
+      "performance_optimization": "performance_requirements == 'basic'"
+    }
+  },
+  "step_dependencies": {
+    "architecture_design": ["pattern_matching", "technology_stack_analysis"],
+    "deployment_strategy": ["architecture_design"],
+    "architecture_validation": ["architecture_design", "best_practices_integration"]
+  }
+}
+

@@ -1,0 +1,68 @@
+routing_rules:
+  # 基于需求复杂度的路由
+  complexity_level:
+    simple: "local_model_mcp"      # 简单需求，本地处理
+    medium: "cloud_search_mcp"     # 中等复杂度，云端处理
+    complex: "cloud_search_mcp"    # 复杂需求，云端高级模型
+    
+  # 基于领域类型的路由
+  domain_type:
+    ocr: "cloud_search_mcp"        # OCR需求使用云端视觉模型
+    nlp: "local_model_mcp"         # NLP需求可本地处理
+    web: "local_model_mcp"         # Web开发需求本地处理
+    ai: "cloud_search_mcp"         # AI需求使用云端高级模型
+    vision: "cloud_search_mcp"     # 视觉需求使用云端模型
+    
+  # 基于语言类型的路由
+  language_type:
+    chinese: "cloud_search_mcp"    # 中文需求，特别是繁体中文
+    english: "local_model_mcp"     # 英文需求本地处理
+    multilingual: "cloud_search_mcp" # 多语言需求云端处理
+    
+  # 基于分析深度的路由
+  analysis_depth:
+    basic: "local_model_mcp"       # 基础分析
+    detailed: "cloud_search_mcp"   # 详细分析
+    comprehensive: "cloud_search_mcp" # 全面分析
+    
+  # 基于隐私要求的路由
+  privacy_level:
+    sensitive: "local_model_mcp"   # 敏感数据本地处理
+    normal: "cloud_search_mcp"     # 普通数据云端处理
+    public: "cloud_search_mcp"     # 公开数据云端处理
+    
+  # 基于响应时间要求的路由
+  response_time:
+    real_time: "local_model_mcp"   # 实时要求本地处理
+    fast: "local_model_mcp"        # 快速响应本地处理
+    normal: "cloud_search_mcp"     # 正常响应云端处理
+    batch: "cloud_search_mcp"      # 批量处理云端处理
+
+# 特殊路由规则
+special_routing:
+  # 繁体中文OCR特殊路由
+  traditional_chinese_ocr:
+    primary: "cloud_search_mcp"    # 主要使用云端模型
+    fallback: "local_model_mcp"    # 备用本地模型
+    models: ["claude", "gemini", "mistral"] # 优先模型顺序
+    
+  # 手写识别特殊路由
+  handwriting_recognition:
+    primary: "cloud_search_mcp"
+    fallback: "local_model_mcp"
+    models: ["claude", "gemini"]
+    
+  # 复杂表格分析特殊路由
+  complex_table_analysis:
+    primary: "cloud_search_mcp"
+    fallback: "local_model_mcp"
+    models: ["claude", "gemini"]
+
+# 路由决策权重
+routing_weights:
+  complexity_level: 0.3
+  domain_type: 0.25
+  language_type: 0.2
+  privacy_level: 0.15
+  response_time: 0.1
+

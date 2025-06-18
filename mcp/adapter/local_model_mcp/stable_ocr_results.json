@@ -1,0 +1,38 @@
+[
+  {
+    "method_name": "Mistral API",
+    "success": false,
+    "processing_time": 0.3503291606903076,
+    "confidence": 0.0,
+    "accuracy": {
+      "overall_accuracy": 0.0,
+      "correct_fields": 0,
+      "total_fields": 11
+    },
+    "error": "API Error 401: Unauthorized"
+  },
+  {
+    "method_name": "Tesseract OCR",
+    "success": false,
+    "processing_time": 30.0,
+    "confidence": 0.0,
+    "accuracy": {
+      "overall_accuracy": 0.0,
+      "correct_fields": 0,
+      "total_fields": 11
+    },
+    "error": "Tesseract timeout after 30 seconds"
+  },
+  {
+    "method_name": "EasyOCR",
+    "success": false,
+    "processing_time": 0.0,
+    "confidence": 0.0,
+    "accuracy": {
+      "overall_accuracy": 0.0,
+      "correct_fields": 0,
+      "total_fields": 11
+    },
+    "error": "Chinese_tra is only compatible with English, try lang_list=[\"ch_tra\",\"en\"]"
+  }
+]

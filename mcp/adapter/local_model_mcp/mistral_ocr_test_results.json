@@ -1,0 +1,14 @@
+{
+  "comprehensive": {
+    "error": "处理失败"
+  },
+  "table_focus": {
+    "error": "处理失败"
+  },
+  "handwriting_focus": {
+    "error": "处理失败"
+  },
+  "form_focus": {
+    "error": "处理失败"
+  }
+}

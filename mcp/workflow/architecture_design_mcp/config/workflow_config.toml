@@ -1,0 +1,64 @@
+[workflow]
+name = "架构设计智能引擎"
+version = "1.0.0"
+description = "智能架构建议，最佳实践推荐的智能工作流"
+author = "PowerAutomation Team"
+
+[dependencies]
+adapters = ["local_model_mcp", "cloud_search_mcp"]
+required_models = ["qwen", "mistral", "gemini", "claude"]
+workflow_dependencies = ["requirements_analysis_mcp"]
+
+[execution]
+timeout = 600  # 秒，架构设计需要更长时间
+max_retries = 3
+parallel_processing = true
+batch_size = 3
+
+[monitoring]
+enable_logging = true
+log_level = "INFO"
+metrics_collection = true
+performance_tracking = true
+
+[design_settings]
+min_confidence_threshold = 0.75
+max_architectures_per_request = 3
+enable_pattern_matching = true
+enable_best_practices = true
+enable_scalability_analysis = true
+enable_security_analysis = true
+
+[architecture_patterns]
+microservices = ["高可用", "可扩展", "分布式", "云原生"]
+monolithic = ["简单", "快速开发", "小团队", "MVP"]
+serverless = ["事件驱动", "自动扩展", "按需付费", "无服务器"]
+layered = ["分层架构", "清晰职责", "易维护", "传统应用"]
+
+[technology_stacks]
+backend = {
+    python = ["FastAPI", "Django", "Flask", "SQLAlchemy"],
+    nodejs = ["Express", "NestJS", "Koa", "TypeScript"],
+    java = ["Spring Boot", "Spring Cloud", "Hibernate", "Maven"],
+    golang = ["Gin", "Echo", "GORM", "Docker"]
+}
+
+frontend = {
+    react = ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    vue = ["Vue.js", "Nuxt.js", "Vuetify", "Pinia"],
+    angular = ["Angular", "TypeScript", "RxJS", "Angular Material"]
+}
+
+database = {
+    relational = ["PostgreSQL", "MySQL", "SQLite"],
+    nosql = ["MongoDB", "Redis", "Elasticsearch"],
+    cloud = ["AWS RDS", "Google Cloud SQL", "Azure Database"]
+}
+
+[extensions]
+# 新功能默认关闭，遵循强制开发原则
+advanced_pattern_recognition = false
+real_time_collaboration = false
+automated_code_generation = false
+performance_optimization = true
+

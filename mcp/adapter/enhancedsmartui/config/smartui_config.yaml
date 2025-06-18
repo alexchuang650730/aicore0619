@@ -1,0 +1,102 @@
+# SmartUI Enhanced 配置文件
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 5002
+  debug: false
+  
+# MCP Coordinator 配置
+mcp_coordinator:
+  url: "http://localhost:8089"
+  registration_endpoint: "/coordinator/register"
+  health_check_interval: 30
+  
+# MCP 信息配置
+mcp_info:
+  mcp_id: "smartui_enhanced"
+  version: "1.0.0"
+  description: "智能交互界面生成系统"
+  capabilities:
+    - "ui_generation"
+    - "user_analysis"
+    - "decision_making"
+    - "workflow_coordination"
+    - "api_state_management"
+    - "real_time_adaptation"
+  
+# UI 生成配置
+ui_generation:
+  default_theme: "light"
+  supported_themes:
+    - "light"
+    - "dark"
+    - "high_contrast"
+    - "testing"
+  
+  default_layout: "grid"
+  supported_layouts:
+    - "grid"
+    - "flexbox"
+    - "sidebar"
+    - "dashboard"
+    - "coding_workspace"
+    - "testing_workspace"
+  
+  component_cache:
+    enabled: true
+    max_size: 100
+    ttl: 3600
+  
+  performance:
+    max_generation_time: 2.0
+    max_memory_usage: "50MB"
+    concurrent_requests: 10
+
+# 用户分析配置
+user_analysis:
+  enabled: true
+  tracking:
+    interactions: true
+    preferences: true
+    performance: true
+  
+  privacy:
+    anonymize_data: true
+    retention_days: 30
+
+# 决策引擎配置
+decision_engine:
+  rules_engine:
+    enabled: true
+    rule_files:
+      - "rules/ui_rules.yaml"
+      - "rules/layout_rules.yaml"
+  
+  machine_learning:
+    enabled: false
+    model_path: "models/decision_model.pkl"
+  
+  fallback_strategy: "default_layout"
+
+# API 状态管理配置
+api_state:
+  routes:
+    health_check: "/health"
+    mcp_request: "/mcp/request"
+    ui_generate: "/api/ui/generate"
+    capabilities: "/api/capabilities"
+  
+  monitoring:
+    enabled: true
+    metrics_endpoint: "/metrics"
+    log_level: "INFO"
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/smartui_enhanced.log"
+  max_size: "10MB"
+  backup_count: 5
+

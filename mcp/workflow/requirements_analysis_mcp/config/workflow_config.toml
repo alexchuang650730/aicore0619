@@ -1,0 +1,43 @@
+[workflow]
+name = "需求分析智能引擎"
+version = "1.0.0"
+description = "AI理解业务需求，生成技术方案的智能工作流"
+author = "PowerAutomation Team"
+
+[dependencies]
+adapters = ["local_model_mcp", "cloud_search_mcp"]
+required_models = ["qwen", "mistral", "gemini", "claude"]
+
+[execution]
+timeout = 300  # 秒
+max_retries = 3
+parallel_processing = true
+batch_size = 5
+
+[monitoring]
+enable_logging = true
+log_level = "INFO"
+metrics_collection = true
+performance_tracking = true
+
+[analysis_settings]
+min_confidence_threshold = 0.7
+max_solutions_per_request = 5
+enable_risk_assessment = true
+enable_cost_estimation = true
+enable_feasibility_analysis = true
+
+[domain_mappings]
+ocr = ["文字识别", "图像处理", "文档分析", "繁体中文", "手写识别"]
+nlp = ["自然语言处理", "文本分析", "语言模型"]
+web = ["网站开发", "前端", "后端", "API"]
+ai = ["机器学习", "深度学习", "神经网络", "大语言模型"]
+vision = ["计算机视觉", "图像识别", "视觉AI"]
+
+[extensions]
+# 新功能默认关闭，遵循强制开发原则
+advanced_analysis = false
+multi_language_support = true
+real_time_analysis = false
+collaborative_analysis = false
+

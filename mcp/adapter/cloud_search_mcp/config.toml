@@ -1,0 +1,126 @@
+[cloud_search_mcp]
+name = "CloudSearchMCP"
+version = "1.0.0"
+description = "统一的云端视觉搜索MCP，支持多模型配置化选择"
+default_model = "gemini_flash"
+fallback_models = ["claude_sonnet", "pixtral_12b"]
+priority = "balanced"  # speed, cost, quality, balanced
+
+# 模型配置
+[models.gemini_flash]
+enabled = true
+model_id = "google/gemini-2.5-flash-preview"
+api_key = "${GEMINI_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 30
+cost_per_1k_tokens = 0.00000015
+quality_score = 0.85
+speed_score = 0.95
+
+[models.gemini_pro]
+enabled = true
+model_id = "google/gemini-2.5-pro-preview"
+api_key = "${GEMINI_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 45
+cost_per_1k_tokens = 0.00000125
+quality_score = 0.92
+speed_score = 0.80
+
+[models.claude_sonnet]
+enabled = true
+model_id = "anthropic/claude-3.7-sonnet"
+api_key = "${CLAUDE_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 45
+cost_per_1k_tokens = 0.000003
+quality_score = 0.95
+speed_score = 0.80
+
+[models.claude_opus]
+enabled = false
+model_id = "anthropic/claude-opus-4"
+api_key = "${CLAUDE_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 60
+cost_per_1k_tokens = 0.000015
+quality_score = 0.98
+speed_score = 0.70
+
+[models.pixtral_12b]
+enabled = true
+model_id = "mistralai/pixtral-12b"
+api_key = "${OPENROUTER_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 40
+cost_per_1k_tokens = 0.000001
+quality_score = 0.88
+speed_score = 0.85
+
+[models.pixtral_large]
+enabled = false
+model_id = "mistralai/pixtral-large-2411"
+api_key = "${OPENROUTER_API_KEY}"
+base_url = "https://openrouter.ai/api/v1"
+max_tokens = 4000
+temperature = 0.1
+timeout = 50
+cost_per_1k_tokens = 0.000002
+quality_score = 0.92
+speed_score = 0.75
+
+# OCR设置
+[ocr_settings]
+default_language = "auto"
+output_format = "markdown"
+quality_level = "high"
+max_image_size = 10485760  # 10MB
+supported_formats = ["jpg", "jpeg", "png", "webp", "bmp", "tiff"]
+enable_preprocessing = true
+enable_postprocessing = true
+
+# 路由设置
+[routing]
+enable_smart_routing = true
+cost_optimization = true
+quality_threshold = 0.8
+max_retries = 3
+fallback_enabled = true
+load_balancing = true
+circuit_breaker_enabled = true
+circuit_breaker_threshold = 5
+circuit_breaker_timeout = 300
+
+# 性能监控
+[monitoring]
+enable_metrics = true
+log_level = "INFO"
+performance_tracking = true
+cost_tracking = true
+error_tracking = true
+metrics_retention_days = 30
+
+# 缓存设置
+[cache]
+enable_cache = true
+cache_ttl = 3600  # 1小时
+max_cache_size = 1000
+cache_similar_threshold = 0.95
+
+# 安全设置
+[security]
+enable_encryption = true
+api_key_encryption = true
+data_retention_days = 7
+privacy_mode = "standard"  # strict, standard, permissive
+

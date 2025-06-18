@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerAutomation 智慧工作台</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* 主容器 */
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 側邊欄 */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            padding: 0;
+            box-shadow: 4px 0 20px rgba(37, 99, 235, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .logo i {
+            font-size: 24px;
+            color: #60a5fa;
+        }
+
+        .nav-menu {
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: #60a5fa;
+        }
+
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.15);
+            border-left-color: #ffffff;
+        }
+
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* 主內容區 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* 頂部欄 */
+        .header {
+            background: white;
+            padding: 16px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .breadcrumb {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-left: auto;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: #f3f4f6;
+            border-radius: 8px;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* 內容區域 */
+        .content {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+            background: #f9fafb;
+        }
+
+        /* 儀表板網格 */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        /* 卡片樣式 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+        }
+
+        /* 統計卡片 */
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* 工作流卡片 */
+        .workflow-card {
+            border-left: 4px solid #2563eb;
+        }
+
+        .workflow-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-active {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-running {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-completed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        /* 按鈕樣式 */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        /* 工作流編輯器 */
+        .workflow-editor {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .workflow-canvas {
+            min-height: 400px;
+            background: #f9fafb;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            margin-top: 16px;
+        }
+
+        /* 工具欄 */
+        .toolbar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+
+            .sidebar .nav-item span {
+                display: none;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 動畫效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* 進度條 */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        /* 通知徽章 */
+        .badge {
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 側邊欄 -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>PowerAutomation</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>智慧儀表板</span>
+                </div>
+                <div class="nav-item" data-page="coding">
+                    <i class="fas fa-code"></i>
+                    <span>編碼工作流</span>
+                    <div class="badge">3</div>
+                </div>
+                <div class="nav-item" data-page="deployment">
+                    <i class="fas fa-rocket"></i>
+                    <span>部署工作流</span>
+                </div>
+                <div class="nav-item" data-page="testing">
+                    <i class="fas fa-vial"></i>
+                    <span>測試工作流</span>
+                    <div class="badge">1</div>
+                </div>
+                <div class="nav-item" data-page="projects">
+                    <i class="fas fa-folder"></i>
+                    <span>項目管理</span>
+                </div>
+                <div class="nav-item" data-page="ai-assistant">
+                    <i class="fas fa-robot"></i>
+                    <span>AI助手</span>
+                </div>
+                <div class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>系統設置</span>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 主內容區 -->
+        <div class="main-content">
+            <!-- 頂部欄 -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="breadcrumb">
+                        <i class="fas fa-home"></i> 智慧工作台 / 儀表板
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        新建工作流
+                    </button>
+                    <div class="user-info">
+                        <div class="user-avatar">U</div>
+                        <span>專業版用戶</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 內容區域 -->
+            <main class="content" id="main-content">
+                <!-- 儀表板頁面 -->
+                <div id="dashboard-page">
+                    <!-- 統計卡片 -->
+                    <div class="dashboard-grid">
+                        <div class="card stat-card">
+                            <div class="card-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">活躍項目</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="card stat-card">
+                            <div class="card-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="stat-number">28</div>
+                            <div class="stat-label">運行中工作流</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div class="card stat-card">
+                            <div class="card-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-number">156</div>
+                            <div class="stat-label">完成任務</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="card stat-card">
+                            <div class="card-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-number">2,847</div>
+                            <div class="stat-label">可用積分</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 工作流狀態 -->
+                    <div class="dashboard-grid">
+                        <div class="card workflow-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <i class="fas fa-code"></i>
+                                    智能編碼工作流
+                                </div>
+                                <span class="workflow-status status-active">運行中</span>
+                            </div>
+                            <p>AI輔助代碼生成和審查</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <div style="margin-top: 16px;">
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-play"></i>
+                                    執行
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-edit"></i>
+                                    編輯
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card workflow-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <i class="fas fa-rocket"></i>
+                                    自動部署工作流
+                                </div>
+                                <span class="workflow-status status-completed">已完成</span>
+                            </div>
+                            <p>CI/CD自動化部署流程</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <div style="margin-top: 16px;">
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-history"></i>
+                                    查看日誌
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-redo"></i>
+                                    重新部署
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card workflow-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <i class="fas fa-vial"></i>
+                                    智能測試工作流
+                                </div>
+                                <span class="workflow-status status-running">測試中</span>
+                            </div>
+                            <p>自動化測試和質量保證</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div style="margin-top: 16px;">
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-pause"></i>
+                                    暫停
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <i class="fas fa-chart-line"></i>
+                                    報告
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 智能工作流編輯器 -->
+                    <div class="workflow-editor">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fas fa-magic"></i>
+                                智能工作流可視化編輯器
+                            </div>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-save"></i>
+                                保存工作流
+                            </button>
+                        </div>
+                        
+                        <div class="toolbar">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-plus"></i>
+                                添加節點
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-link"></i>
+                                連接節點
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-play"></i>
+                                預覽執行
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-download"></i>
+                                導出配置
+                            </button>
+                        </div>
+
+                        <div class="workflow-canvas">
+                            <div style="text-align: center;">
+                                <i class="fas fa-mouse-pointer" style="font-size: 48px; color: #d1d5db; margin-bottom: 16px;"></i>
+                                <h3 style="color: #6b7280; margin-bottom: 8px;">拖拽創建工作流</h3>
+                                <p style="color: #9ca3af;">點擊"添加節點"開始設計您的智能工作流</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // 頁面切換功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const mainContent = document.getElementById('main-content');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除所有活躍狀態
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // 添加當前活躍狀態
+                    this.classList.add('active');
+
+                    // 獲取頁面類型
+                    const page = this.getAttribute('data-page');
+                    loadPage(page);
+                });
+            });
+
+            function loadPage(page) {
+                // 這裡可以加載不同的頁面內容
+                console.log('Loading page:', page);
+                
+                // 更新麵包屑
+                const breadcrumb = document.querySelector('.breadcrumb');
+                const pageNames = {
+                    'dashboard': '儀表板',
+                    'coding': '編碼工作流',
+                    'deployment': '部署工作流',
+                    'testing': '測試工作流',
+                    'projects': '項目管理',
+                    'ai-assistant': 'AI助手',
+                    'settings': '系統設置'
+                };
+                breadcrumb.innerHTML = `<i class="fas fa-home"></i> 智慧工作台 / ${pageNames[page]}`;
+            }
+
+            // 添加一些交互效果
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // 模擬實時數據更新
+            setInterval(updateStats, 5000);
+
+            function updateStats() {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers.forEach(stat => {
+                    const currentValue = parseInt(stat.textContent.replace(',', ''));
+                    const newValue = currentValue + Math.floor(Math.random() * 3);
+                    stat.textContent = newValue.toLocaleString();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

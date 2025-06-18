@@ -1,0 +1,38 @@
+# Enterprise Smart UI MCP 配置
+
+[server]
+name = "enterprise_smartui_mcp"
+version = "1.0.0"
+description = "Enterprise版本智能UI MCP - VS Code风格OCR界面"
+
+[ui]
+theme = "vscode_dark"
+layout = "three_column"
+responsive = true
+
+[features]
+version_type = "enterprise"
+agent_count = 6
+quality_threshold = 0.90
+concurrent_workflows = 100
+monthly_executions = "unlimited"
+
+[agents]
+requirements_analysis = true
+architecture_design = true
+implementation = true
+testing_verification = true
+deployment_release = true
+monitoring_operations = true
+
+[monitoring]
+real_time_stats = true
+performance_tracking = true
+quality_metrics = true
+enterprise_reporting = true
+
+[integration]
+ocr_coordinator_url = "http://localhost:8096"
+workflow_api_enabled = true
+version_management = true
+

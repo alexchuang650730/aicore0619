@@ -1,0 +1,98 @@
+{
+  "total_tests": 15,
+  "passed": 15,
+  "failed": 0,
+  "success_rate": 1.0,
+  "results": [
+    {
+      "file": "/opt/powerautomation/mcp/adapter/cloud_search_mcp/unit_tests/test_cloud_search_mcp_comprehensive.py",
+      "name": "test_cloud_search_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/development_intervention_mcp/unit_tests/test_development_intervention_mcp_comprehensive.py",
+      "name": "test_development_intervention_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/directory_structure_mcp/unit_tests/test_directory_structure_mcp_comprehensive.py",
+      "name": "test_directory_structure_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/enterprise_smartui_mcp/unit_tests/test_enterprise_smartui_mcp_comprehensive.py",
+      "name": "test_enterprise_smartui_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/github_mcp/unit_tests/test_github_mcp_comprehensive.py",
+      "name": "test_github_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/test_manage_mcp/unit_tests/test_test_manage_mcp_comprehensive.py",
+      "name": "test_test_manage_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/kilocode_mcp/unit_tests/test_kilocode_mcp_comprehensive.py",
+      "name": "test_kilocode_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/local_model_mcp/unit_tests/test_local_model_mcp_comprehensive.py",
+      "name": "test_local_model_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/adapter/enhanced_workflow_mcp/unit_tests/test_enhanced_workflow_mcp_comprehensive.py",
+      "name": "test_enhanced_workflow_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/architecture_design_mcp/unit_tests/test_architecture_design_mcp_comprehensive.py",
+      "name": "test_architecture_design_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/coding_workflow_mcp/unit_tests/test_coding_workflow_mcp_comprehensive.py",
+      "name": "test_coding_workflow_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/developer_flow_mcp/unit_tests/test_developer_flow_mcp_comprehensive.py",
+      "name": "test_developer_flow_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/operations_workflow_mcp/unit_tests/test_operations_workflow_mcp_comprehensive.py",
+      "name": "test_operations_workflow_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/release_manager_mcp/unit_tests/test_release_manager_mcp_comprehensive.py",
+      "name": "test_release_manager_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "/opt/powerautomation/mcp/workflow/requirements_analysis_mcp/unit_tests/test_requirements_analysis_mcp_comprehensive.py",
+      "name": "test_requirements_analysis_mcp_comprehensive",
+      "passed": true,
+      "status": "PASS"
+    }
+  ]
+}

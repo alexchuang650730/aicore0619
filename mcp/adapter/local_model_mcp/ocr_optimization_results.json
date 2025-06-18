@@ -1,0 +1,60 @@
+{
+  "baseline_test": {
+    "test_name": "baseline_ocr",
+    "processing_time": 7.148713827133179,
+    "quality_score": 0.7333333333333333,
+    "text_length": 988,
+    "confidence": 0.5,
+    "engine": "tesseract_default",
+    "config": "default",
+    "text_preview": "5 Ef\n\n~ TA Be OB eR - ee SE A be\n\n- RS\n\n© 88 BR BES > Se He Se\n\n \n\nP#:900829 2025/06/09 02:14:42\n\n臺銀...",
+    "error": ""
+  },
+  "preprocessing_test": {
+    "test_name": "preprocessing_optimization",
+    "processing_time": 11.717536926269531,
+    "quality_score": 0.7,
+    "text_length": 2161,
+    "confidence": 0.6,
+    "engine": "tesseract_preprocessed",
+    "config": "image_preprocessing",
+    "text_preview": " \n  \n\n \n\n  \n\n \n\n                                                                                    ...",
+    "error": ""
+  },
+  "tesseract_optimization_test": {
+    "test_name": "tesseract_optimization",
+    "processing_time": 45.80096936225891,
+    "quality_score": 0.7999999999999999,
+    "text_length": 1283,
+    "confidence": 0.7,
+    "engine": "tesseract_optimized",
+    "config": "--psm 3 --oem 1 --dpi 300 -l chi_sim+chi_tra+eng",
+    "text_preview": "5 Ef\n\n~ TA Be OB eR - ee SE A be\n\n- RS\n\n© 88 BR BES > Se He Se\n\n \n\n \n\nP#:900829 2025/06/09 02:14:42\n...",
+    "error": ""
+  },
+  "multi_engine_test": {
+    "test_name": "multi_engine_optimization",
+    "processing_time": 21.95192050933838,
+    "quality_score": 0.7,
+    "text_length": 2128,
+    "confidence": 0.7790369540873461,
+    "engine": "tesseract",
+    "config": "best_confidence_fusion",
+    "text_preview": "列 印 者 :900829 2025/06/09 02:14:42 臺 銀 人 壽 利 率 變動 型 人 壽 保 險 要 保 書 (傳統 通路 A) 全 二 和 Pa = Ry =. WF ‘AA a...",
+    "error": ""
+  },
+  "comprehensive_test": {
+    "test_name": "comprehensive_optimization",
+    "processing_time": 59.50866222381592,
+    "quality_score": 0.7333333333333333,
+    "text_length": 2458,
+    "confidence": 0.8,
+    "engine": "tesseract_comprehensive",
+    "config": "preprocessing + --psm 6 --oem 1 --dpi 300 -l chi_sim+chi_tra+eng -c preserve_interword_spaces=1",
+    "text_preview": "条当当:82 ANG WR UG Oe: Lb de\n臺銀人聲利率變動型人壽保險要保書(傳統通路 A)    人\na encbaaeaustasseet                        ...",
+    "error": ""
+  },
+  "comparison_analysis": {
+    "error": "没有有效的测试结果"
+  }
+}

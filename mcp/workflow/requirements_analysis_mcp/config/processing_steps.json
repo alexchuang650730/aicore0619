@@ -1,0 +1,153 @@
+{
+  "steps": [
+    {
+      "id": "input_validation",
+      "name": "输入验证",
+      "processor": "InputValidator",
+      "required": true,
+      "timeout": 10,
+      "retry_count": 1,
+      "description": "验证需求输入的完整性和格式"
+    },
+    {
+      "id": "requirement_preprocessing",
+      "name": "需求预处理",
+      "processor": "RequirementPreprocessor",
+      "required": true,
+      "timeout": 15,
+      "retry_count": 2,
+      "description": "清理和标准化需求文本"
+    },
+    {
+      "id": "domain_classification",
+      "name": "领域分类",
+      "processor": "DomainClassifier",
+      "required": true,
+      "timeout": 20,
+      "retry_count": 2,
+      "description": "识别需求所属的技术领域"
+    },
+    {
+      "id": "complexity_assessment",
+      "name": "复杂度评估",
+      "processor": "ComplexityAssessor",
+      "required": true,
+      "timeout": 25,
+      "retry_count": 2,
+      "description": "评估需求的技术复杂度"
+    },
+    {
+      "id": "adapter_selection",
+      "name": "适配器选择",
+      "processor": "AdapterSelector",
+      "required": true,
+      "timeout": 5,
+      "retry_count": 1,
+      "description": "根据路由规则选择最佳适配器"
+    },
+    {
+      "id": "requirement_parsing",
+      "name": "需求解析",
+      "processor": "RequirementParser",
+      "required": true,
+      "timeout": 60,
+      "retry_count": 3,
+      "description": "使用AI模型深度解析需求"
+    },
+    {
+      "id": "feasibility_analysis",
+      "name": "可行性分析",
+      "processor": "FeasibilityAnalyzer",
+      "required": true,
+      "timeout": 45,
+      "retry_count": 2,
+      "description": "分析技术实现可行性"
+    },
+    {
+      "id": "solution_generation",
+      "name": "方案生成",
+      "processor": "SolutionGenerator",
+      "required": true,
+      "timeout": 90,
+      "retry_count": 3,
+      "description": "生成技术解决方案"
+    },
+    {
+      "id": "risk_assessment",
+      "name": "风险评估",
+      "processor": "RiskAssessor",
+      "required": false,
+      "timeout": 30,
+      "retry_count": 2,
+      "description": "评估实施风险",
+      "conditions": {
+        "enable_risk_assessment": true
+      }
+    },
+    {
+      "id": "cost_estimation",
+      "name": "成本估算",
+      "processor": "CostEstimator",
+      "required": false,
+      "timeout": 20,
+      "retry_count": 1,
+      "description": "估算实施成本",
+      "conditions": {
+        "enable_cost_estimation": true
+      }
+    },
+    {
+      "id": "priority_ranking",
+      "name": "优先级排序",
+      "processor": "PriorityRanker",
+      "required": true,
+      "timeout": 25,
+      "retry_count": 2,
+      "description": "对方案进行优先级排序"
+    },
+    {
+      "id": "result_formatting",
+      "name": "结果格式化",
+      "processor": "ResultFormatter",
+      "required": true,
+      "timeout": 15,
+      "retry_count": 1,
+      "description": "格式化最终分析结果"
+    },
+    {
+      "id": "quality_validation",
+      "name": "质量验证",
+      "processor": "QualityValidator",
+      "required": false,
+      "timeout": 20,
+      "retry_count": 1,
+      "description": "验证分析结果质量",
+      "conditions": {
+        "min_confidence_threshold": "> 0.7"
+      }
+    }
+  ],
+  "error_handling": {
+    "on_step_failure": "retry_or_skip",
+    "on_critical_failure": "abort_workflow",
+    "fallback_adapter": "local_model_mcp",
+    "critical_steps": ["input_validation", "requirement_parsing", "solution_generation"]
+  },
+  "parallel_execution": {
+    "enabled": true,
+    "parallel_groups": [
+      {
+        "group_id": "analysis_group",
+        "steps": ["feasibility_analysis", "risk_assessment", "cost_estimation"],
+        "execution_mode": "parallel"
+      }
+    ]
+  },
+  "conditional_execution": {
+    "skip_conditions": {
+      "risk_assessment": "privacy_level == 'sensitive'",
+      "cost_estimation": "analysis_depth == 'basic'"
+    }
+  }
+}
+

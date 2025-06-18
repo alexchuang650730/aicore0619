@@ -1,0 +1,105 @@
+{
+  "review_configs": {
+    "architecture_review": {
+      "review_type": "architecture",
+      "severity_threshold": "high",
+      "human_loop_required": true,
+      "auto_fix_enabled": true,
+      "notification_enabled": true,
+      "timeout_minutes": 45,
+      "description": "架构合规性检查，确保符合MCP通信规范"
+    },
+    "security_review": {
+      "review_type": "security",
+      "severity_threshold": "medium",
+      "human_loop_required": true,
+      "auto_fix_enabled": false,
+      "notification_enabled": true,
+      "timeout_minutes": 60,
+      "description": "安全漏洞检查，包括硬编码凭据、SQL注入等"
+    },
+    "code_style_review": {
+      "review_type": "code_style",
+      "severity_threshold": "low",
+      "human_loop_required": false,
+      "auto_fix_enabled": true,
+      "notification_enabled": false,
+      "timeout_minutes": 15,
+      "description": "代码风格检查，自动修复格式问题"
+    },
+    "functionality_review": {
+      "review_type": "functionality",
+      "severity_threshold": "medium",
+      "human_loop_required": true,
+      "auto_fix_enabled": false,
+      "notification_enabled": true,
+      "timeout_minutes": 30,
+      "description": "功能逻辑检查，确保实现符合需求"
+    },
+    "documentation_review": {
+      "review_type": "documentation",
+      "severity_threshold": "low",
+      "human_loop_required": false,
+      "auto_fix_enabled": true,
+      "notification_enabled": false,
+      "timeout_minutes": 10,
+      "description": "文档完整性检查，自动生成缺失文档"
+    },
+    "performance_review": {
+      "review_type": "performance",
+      "severity_threshold": "medium",
+      "human_loop_required": false,
+      "auto_fix_enabled": true,
+      "notification_enabled": true,
+      "timeout_minutes": 20,
+      "description": "性能问题检查，优化建议"
+    }
+  },
+  "project_specific_rules": {
+    "core_modules": {
+      "paths": ["/mcp/coordinator/", "/mcp/workflow/"],
+      "override_human_loop_required": true,
+      "description": "核心模块需要更严格的人工审查"
+    },
+    "test_modules": {
+      "paths": ["/tests/", "/test/"],
+      "override_human_loop_required": false,
+      "description": "测试模块可以更宽松的自动处理"
+    },
+    "adapter_modules": {
+      "paths": ["/mcp/adapter/"],
+      "override_human_loop_required": false,
+      "description": "适配器模块通常可以自动处理"
+    }
+  },
+  "developer_specific_rules": {
+    "new_developers": {
+      "experience_threshold_days": 30,
+      "override_human_loop_required": true,
+      "description": "新开发者的代码需要更多人工审查"
+    },
+    "senior_developers": {
+      "experience_threshold_days": 365,
+      "override_human_loop_required": false,
+      "description": "资深开发者可以更多自动处理"
+    }
+  },
+  "escalation_rules": {
+    "critical_issues": {
+      "auto_escalate": true,
+      "escalate_to": ["tech_lead", "architect"],
+      "description": "严重问题自动升级"
+    },
+    "security_issues": {
+      "auto_escalate": true,
+      "escalate_to": ["security_team", "tech_lead"],
+      "description": "安全问题自动升级到安全团队"
+    }
+  },
+  "notification_settings": {
+    "slack_webhook": "",
+    "email_notifications": true,
+    "dashboard_updates": true
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "基础OCR识别": {
+    "success": true,
+    "content": "I'm sorry for any confusion, but I'm currently unable to directly process or analyze images. However, I can guide you on how to extract text from an image using Python with the help of libraries like pytesseract and OpenCV. Here's a simple example:\n\nFirst, you need to install the required libraries. You can do this using pip:\n\n```bash\npip install pytesseract opencv-python\n```\n\nThen, you can use the following Python script to extract text from an image:\n\n```python\nimport cv2\nimport pytesseract\n\n# Load the image\nimg = cv2.imread('image.jpg')\n\n# Convert to gray scale\nimg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n\n# Perform thresholding to make the image binary\nret, thresh1 = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)\n\n# Perform OCR using pytesseract\ntext = pytesseract.image_to_string(thresh1, config='--psm 6 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')\n\nprint(text)\n```",
+    "processing_time": 0.19929122924804688,
+    "content_length": 946
+  },
+  "手写内容识别": {
+    "success": true,
+    "content": "I'm sorry for any confusion, but I'm currently unable to visually analyze images. However, I can guide you on how to do it using a Python library called Tesseract, which is an optical character recognition (OCR) software. Here's a simple step-by-step guide:\n\n1. **Install Tesseract**: You can install it using pip:\n   ```\n   pip install pytesseract\n   ```\n   You'll also need to install Tesseract-OCR:\n   - For Windows: Download from https://github.com/UB-Mannheim/tesseract/wiki and add the installation directory to your system PATH.\n   - For macOS: Install using Homebrew: `brew install tesseract`\n\n2. **Install Pillow**: Pillow is a Python Imaging Library which will be used to open the image.\n   ```\n   pip install pillow\n   ```\n\n3. **Use the following Python script** to recognize text from the image:\n\n```python\nfrom PIL import Image\nimport pytesseract\n\n# Open the image file\nimg = Image.open('your_image_file.jpg')\n\n# Use pytesseract to recognize the text\ntext = pytesseract.image_to_string(img)\n\n# Print the recognized text\nprint(text)\n```",
+    "processing_time": 1.1562705039978027,
+    "content_length": 1048
+  },
+  "表格结构还原": {
+    "success": true,
+    "content": "Unfortunately, I can't directly access or analyze images. However, I can guide you on how to extract table data from an image using Python with the help of libraries like OpenCV, pytesseract (for OCR), and pandas.\n\nHere's a step-by-step guide:\n\n1. First, install the required libraries:\n\n```bash\npip install opencv-python pytesseract pandas\n```\n\nYou'll also need to install Tesseract-OCR:\n\n```bash\npip install pytesseract\n```\n\n2. Download the Tesseract-OCR engine from the following link and add the installation path to your system's PATH: https://github.com/UB-Mannheim/tesseract/wiki\n\n3. Now, you can use the following Python script to extract table data from an image:\n\n```python\nimport cv2\nimport pytesseract\nimport pandas as pd\nimport numpy as np\n\ndef extract_table_from_image(image_path):\n    # Load the image\n    img = cv2.imread(image_path)\n\n    # Convert to grayscale\n    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n\n    # Perform thresholding to improve the quality of the image for text extraction\n    ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)\n\n    # Perform OCR using pytesseract\n    custom_config = r'--oem 3 --psm 6'\n    text = pytesseract.image_to_string(thresh, config=custom_config)\n\n    # Split the text into rows\n    rows = text.split('\\n')\n\n    # Remove any empty rows\n    rows = [row for row in rows if row.strip()]\n\n    # Create a DataFrame from the rows\n    df = pd.DataFrame([row.split('\\t') for row in rows])\n\n    return df\n\n# Usage\nimage_path = 'path_to_your_image.jpg'\ndf = extract_table_from_image(image_path)\nprint(df)\n```",
+    "processing_time": 0.32219839096069336,
+    "content_length": 1596
+  },
+  "文档信息提取": {
+    "success": true,
+    "content": "**Key Information Extracted from the Insurance Document:**\n\n1. **Document Type:** Car Insurance Policy\n2. **Insurance Company:** ABC Insurance Co.\n3. **Investor Information:**\n   - Name: John Doe\n   - ID Number: 1234567890\n   - Contact Number: 123-456-7890\n   - Email: john.doe@example.com\n4. **Insured Vehicle Information:**\n   - Make: Toyota\n   - Model: Corolla\n   - Year: 2018\n   - Registration Number: ABC-123\n   - Engine Number: 1HREDA52JHK001234\n   - Chassis Number: JTHME0J23D0012345\n5. **Policy Details:**\n   - Policy Number: INS123456789\n   - Policy Effective Date: 01/01/2022\n   - Policy Expiry Date: 12/31/2022\n   - Sum Insured: $50,000\n   - Premium: $600 (Annual)\n6. **Coverage:**\n   - Comprehensive & Collision\n   - Third-Party Liability\n   - Personal Belongings Cover\n   - Towing & Roadside Assistance\n7. **Deductible:** $500 per claim",
+    "processing_time": 0.6947329044342041,
+    "content_length": 849
+  }
+}

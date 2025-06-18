@@ -1,0 +1,138 @@
+[quality]
+# 质量阈值设置
+min_confidence = 0.75
+min_accuracy = 0.85
+max_processing_time = 600
+min_architecture_count = 2
+max_architecture_count = 3
+
+[performance]
+# 性能设置
+enable_caching = true
+cache_ttl = 7200  # 2小时，架构设计结果可以缓存更久
+enable_compression = true
+max_memory_usage = "4GB"
+concurrent_requests = 3
+
+[cost_optimization]
+# 成本优化设置
+prefer_local = false  # 架构设计优先使用云端高级模型
+cost_threshold = 0.10  # 美元
+quality_cost_balance = 0.8  # 更偏向质量
+enable_cost_tracking = true
+
+[fallback]
+# 降级策略
+enable_fallback = true
+fallback_quality_threshold = 0.65
+max_fallback_attempts = 2
+fallback_timeout = 120
+
+[design_quality]
+# 设计质量控制
+pattern_matching_confidence = 0.8
+architecture_design_confidence = 0.85
+scalability_analysis_confidence = 0.75
+security_analysis_confidence = 0.8
+best_practices_confidence = 0.8
+
+[output_quality]
+# 输出质量控制
+min_architecture_detail_length = 500  # 字符
+max_architecture_detail_length = 5000  # 字符
+require_component_diagram = true
+require_data_flow_diagram = true
+require_deployment_diagram = true
+require_technology_stack = true
+require_scalability_plan = true
+require_security_measures = true
+
+[domain_specific_quality]
+# 领域特定质量设置
+ocr_architecture = {
+    min_accuracy_requirement = 0.9,
+    require_multi_model_support = true,
+    require_performance_metrics = true,
+    require_fallback_strategy = true
+}
+
+web_architecture = {
+    min_accuracy_requirement = 0.85,
+    require_responsive_design = true,
+    require_api_design = true,
+    require_database_design = true
+}
+
+ai_architecture = {
+    min_accuracy_requirement = 0.9,
+    require_model_management = true,
+    require_data_pipeline = true,
+    require_monitoring_system = true
+}
+
+[validation_rules]
+# 验证规则
+required_fields = [
+    "requirements_analysis_result",
+    "system_scale",
+    "architecture_complexity"
+]
+
+optional_fields = [
+    "technology_preferences",
+    "deployment_constraints",
+    "performance_requirements",
+    "security_requirements"
+]
+
+field_constraints = {
+    system_scale = { allowed_values = ["small", "medium", "large", "enterprise"] },
+    architecture_complexity = { allowed_values = ["simple", "moderate", "complex", "distributed"] },
+    deployment_environment = { allowed_values = ["on_premise", "cloud", "hybrid", "edge"] }
+}
+
+[architecture_patterns_quality]
+# 架构模式质量要求
+microservices = {
+    min_service_count = 3,
+    max_service_count = 20,
+    require_api_gateway = true,
+    require_service_discovery = true,
+    require_monitoring = true
+}
+
+monolithic = {
+    max_complexity_score = 0.7,
+    require_layered_design = true,
+    require_separation_of_concerns = true
+}
+
+serverless = {
+    require_event_driven_design = true,
+    require_stateless_functions = true,
+    require_auto_scaling = true
+}
+
+[technology_stack_quality]
+# 技术栈质量要求
+backend_requirements = {
+    require_framework_selection = true,
+    require_database_selection = true,
+    require_api_design = true,
+    require_testing_strategy = true
+}
+
+frontend_requirements = {
+    require_ui_framework = true,
+    require_state_management = true,
+    require_responsive_design = true,
+    require_accessibility = true
+}
+
+infrastructure_requirements = {
+    require_containerization = true,
+    require_orchestration = true,
+    require_monitoring = true,
+    require_logging = true
+}
+

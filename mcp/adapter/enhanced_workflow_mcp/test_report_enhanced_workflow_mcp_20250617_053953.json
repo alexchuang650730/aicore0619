@@ -1,0 +1,23 @@
+{
+  "test_id": "MCP_TestEnhancedWorkflowMcp_20250617_053953",
+  "test_name": "TestEnhancedWorkflowMcp",
+  "module_name": "enhanced_workflow_mcp",
+  "module_type": "adapter",
+  "test_start_time": "2025-06-17T05:39:53.539749",
+  "test_end_time": "2025-06-17T05:39:53.543597",
+  "test_duration": 0.003848,
+  "test_results": [
+    {
+      "test_case": "TC001_模块初始化测试",
+      "status": "PASS",
+      "message": "模块初始化测试通过",
+      "timestamp": "2025-06-17T05:39:53.543355"
+    }
+  ],
+  "test_summary": {
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "success_rate": 100.0
+  }
+}
